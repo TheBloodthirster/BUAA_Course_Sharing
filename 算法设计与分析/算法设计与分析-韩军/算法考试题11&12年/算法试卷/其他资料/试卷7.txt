@@ -1,0 +1,71 @@
+算法：卷面40分+10分附加题
+
+         一、  判断：
+
+         二、 简答题：说说AVL树和2-3数的查找和插入效率:lg(n),lg(n)
+
+                      说一个有最优解的贪心算法:最短路径。DIJKSTRA，哈夫曼编码
+
+                      还有两个NP问题 电路可满足性问题，布尔公式可满足性问题，3合取范式的布尔公式的可满足性问题，团问题，顶点覆盖问题，哈密顿回路问题，旅行家（TSP）问题，子集和问题
+
+         三、一个数组中有n个整数A[1..n]，选出其中相同数的
+
+                个数大于n/2的数来（如果存在），例如A[7]=
+
+                 {2，3，3，1，3，4，3}，其中3的个数为4>7/2
+
+                  所以输出3
+
+                 说出这道题用蛮力方法的时间效率  O（n^2）
+                 试用变治的一种方法来做这道题，（预排序）
+	Sort(A[],n);
+        mode[n],count[n],value;
+	i=0, j=0; 
+	while i<n
+	   value = A[i];
+           count=1;
+	   while i+count<n&&A[i+count]==value
+	      count++;
+	   end while
+           if count>n/2
+              mode[j]=value;
+              count[j++]=count;
+           end if
+           i=i+count;
+        end while
+        if(j==0)
+          print("NO!");
+        else
+          pint(mode[],count[]);
+		
+        O(lgn)
+
+        写出伪代码，并说出其时间复杂度
+
+        四、动态规划（和作业题很相似，不用写代码）
+
+        五、分支定界（先分析，输出主要思想，写伪代码）
+
+        附：写出第三题的O(n)时间效率的一个算法(Hash不行)
+
+        提示：任取两个元素，如果不相同，则同时抛弃
+
+
+
+
+
+	P:We say that a recognition problem P1 belongs to class P if some polynomial-time algorithm solves problem P1. 
+	存在求解判定问题P1的多项式算法.
+
+	NP:Roughly speaking, we say that a recognition problem P1 is in the class NP, if for every yes instance I of P1, there is a short (i.e., polynomial length) verification that the instance is a yes instance.
+	对P1的每一个肯定实例，均存在一个多项式时间内的验证。P1中所有问题均属于NP.
+
+	NPC:A recognition problem P1  is said to be NP-complete if :
+	1) P1∈NP, and all other problems in the class NP polynomially transform to P1.
+	2) NP中其它所有问题多项式转化为P1
+
+	NP-Hard: A recognition problem P1 is said to be NP-hard if all other problems in the class NP polynomially reduce to P1. The class NP-hard is broader than the class NP-complete because it includes the class NP as well as problems that are not in class NP.	
+         NP中所有问题多项式转化为P1
+
+归约 可以用求解P2的算法作为子程序来求解P1，则称P1可以归约为P2
+转化 对P1的每个实例均I1可在多项式时间内构造P2的一个实例I2，使得当且仅当I2为肯定实例时，I1也为肯定实例，称P1可以多项式转化为P2
