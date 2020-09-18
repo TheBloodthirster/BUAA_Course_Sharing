@@ -1,0 +1,71 @@
+[R2]dis cur
+#
+ version 5.20, Release 1618P10, Basic
+#
+ sysname R2
+#
+ ipsec cpu-backup enable
+#
+ undo cryptoengine enable
+#
+ nat address-group 1 192.168.5.128 192.168.5.129
+#
+ domain default enable system
+#
+ ip unreachables enable
+#
+acl number 2001
+ rule 0 permit source 10.4.1.0 0.0.0.255
+ rule 2 deny
+#
+vlan 1
+#
+vlan 100
+#
+domain system   
+ access-limit disable
+ state active
+ idle-cut disable
+ self-service-url disable
+#
+local-user admin
+ password cipher .]@USE=B,53Q=^Q`MAF4<1!!
+ service-type telnet
+ level 3
+#
+ stp enable
+#
+interface Aux0
+ async mode flow
+ link-protocol ppp
+#
+interface Serial2/0
+ link-protocol ppp
+#
+interface NULL0
+#
+interface Vlan-interface100
+#               
+interface GigabitEthernet0/0
+ port link-mode route
+ ip address 192.168.100.4 255.255.255.0
+ vrrp vrid 11 virtual-ip 192.168.100.2
+ vrrp vrid 11 priority 80
+#
+interface GigabitEthernet0/1
+ port link-mode route
+ nat outbound 2001 address-group 1
+ ip address 192.168.5.128 255.255.255.0
+#
+ospf 1
+ default-route-advertise cost 200
+ area 0.0.0.0
+  network 192.168.100.0 0.0.0.255
+#
+ ip route-static 0.0.0.0 0.0.0.0 192.168.5.1
+#
+user-interface con 0
+user-interface aux 0
+user-interface vty 0 4
+#
+return

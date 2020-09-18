@@ -1,0 +1,105 @@
+[S1]dis cur
+#
+ version 5.20, Release 5301
+#
+ sysname S1
+#
+ domain default enable system
+#
+ multicast routing-enable
+#
+vlan 1
+#
+vlan 40
+#
+vlan 100
+#
+domain system
+ access-limit disable
+ state active
+ idle-cut disable
+ self-service-url disable
+#
+ stp enable
+#
+interface NULL0 
+#
+interface Vlan-interface40
+ ip address 192.168.4.1 255.255.255.0
+ pim dm
+#
+interface Vlan-interface100
+ ip address 192.168.100.1 255.255.255.0
+#
+interface Ethernet1/0/1
+ port access vlan 40
+#
+interface Ethernet1/0/2
+#
+interface Ethernet1/0/3
+#
+interface Ethernet1/0/4
+#
+interface Ethernet1/0/5
+#
+interface Ethernet1/0/6
+#
+interface Ethernet1/0/7
+#               
+interface Ethernet1/0/8
+#
+interface Ethernet1/0/9
+#
+interface Ethernet1/0/10
+#
+interface Ethernet1/0/11
+#
+interface Ethernet1/0/12
+#
+interface Ethernet1/0/13
+#
+interface Ethernet1/0/14
+#
+interface Ethernet1/0/15
+#
+interface Ethernet1/0/16
+#
+interface Ethernet1/0/17
+#
+interface Ethernet1/0/18
+#
+interface Ethernet1/0/19
+#
+interface Ethernet1/0/20
+#
+interface Ethernet1/0/21
+#
+interface Ethernet1/0/22
+#
+interface Ethernet1/0/23
+ port access vlan 100
+#
+interface Ethernet1/0/24
+ port access vlan 100
+#
+interface GigabitEthernet1/1/1
+#
+interface GigabitEthernet1/1/2
+#
+interface GigabitEthernet1/1/3
+#
+interface GigabitEthernet1/1/4
+#
+ospf 1
+ area 0.0.0.0   
+  network 192.168.100.0 0.0.0.255
+  network 192.168.4.0 0.0.0.255
+#
+ ip route-static 0.0.0.0 0.0.0.0 192.168.100.2
+ ip route-static 0.0.0.0 0.0.0.0 192.168.100.3 preference 80
+ ip route-static 0.0.0.0 0.0.0.0 192.168.100.4 preference 100
+#
+user-interface aux 0
+user-interface vty 0 4
+#
+return

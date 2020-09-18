@@ -1,0 +1,227 @@
+[R2]dis cur
+#
+ version 5.20, Release 2513P27
+#
+ sysname R2
+#
+ domain default enable system
+#
+ ipv6
+#
+ dar p2p signature-file flash:/p2p_default.mtd
+#
+ port-security enable
+#
+ undo ip http enable
+#
+ password-recovery enable
+#
+vlan 1
+#
+domain system
+ access-limit disable
+ state active
+ idle-cut disable
+ self-service-url disable
+#
+user-group system
+ group-attribute allow-guest
+#
+local-user admin
+ password cipher $c$3$40gC1cxf/wIJNa1ufFPJsjKAof+QP5aV
+ authorization-attribute level 3
+ service-type telnet
+#
+cwmp
+ undo cwmp enable
+#
+interface Aux0
+ async mode flow
+ link-protocol ppp
+#
+interface Cellular0/0
+ async mode protocol
+ link-protocol ppp
+#
+interface Ethernet0/0
+ port link-mode route
+ ipv6 address 2::2/64
+ ip address 192.168.1.1 255.255.255.0
+ ospfv3 1 area 0.0.0.0
+#
+interface Ethernet0/1
+ port link-mode route
+#
+interface Serial1/0
+ link-protocol ppp
+ ipv6 address 4::1/64
+ ospfv3 1 area 0.0.0.0
+#
+interface Serial2/0
+ link-protocol ppp
+#
+interface NULL0
+#
+interface Ethernet0/2
+ port link-mode bridge
+#
+interface Ethernet0/3
+ port link-mode bridge
+#
+interface Ethernet0/4
+ port link-mode bridge
+#
+interface Ethernet0/5
+ port link-mode bridge
+#
+interface Ethernet0/6
+ port link-mode bridge
+#
+interface Ethernet0/7
+ port link-mode bridge
+#
+interface Ethernet0/8
+ port link-mode bridge
+#
+interface Ethernet0/9
+ port link-mode bridge
+#
+interface Ethernet0/10
+ port link-mode bridge
+#
+interface Ethernet0/11
+ port link-mode bridge
+#
+interface Ethernet0/12
+ port link-mode bridge
+#
+interface Ethernet0/13
+ port link-mode bridge
+#
+interface Ethernet0/14
+ port link-mode bridge
+#
+interface Ethernet0/15
+ port link-mode bridge
+#
+interface Ethernet0/16
+ port link-mode bridge
+#
+interface Ethernet0/17
+ port link-mode bridge
+#
+interface Ethernet0/18
+ port link-mode bridge
+#
+interface Ethernet0/19
+ port link-mode bridge
+#               
+interface Ethernet0/20
+ port link-mode bridge
+#
+interface Ethernet0/21
+ port link-mode bridge
+#
+interface Ethernet0/22
+ port link-mode bridge
+#
+interface Ethernet0/23
+ port link-mode bridge
+#
+interface Ethernet0/24
+ port link-mode bridge
+#
+interface Ethernet0/25
+ port link-mode bridge
+#
+interface Ethernet0/26
+ port link-mode bridge
+#
+interface Ethernet0/27
+ port link-mode bridge
+#
+interface Ethernet0/28
+ port link-mode bridge
+#
+interface Ethernet0/29
+ port link-mode bridge
+#
+interface Ethernet0/30
+ port link-mode bridge
+#
+interface Ethernet0/31
+ port link-mode bridge
+#
+interface Ethernet0/32
+ port link-mode bridge
+#
+interface Ethernet0/33
+ port link-mode bridge
+#
+interface Ethernet0/34
+ port link-mode bridge
+#
+interface Ethernet0/35
+ port link-mode bridge
+#
+interface Ethernet0/36
+ port link-mode bridge
+#
+interface Ethernet0/37
+ port link-mode bridge
+#
+interface Ethernet0/38
+ port link-mode bridge
+#
+interface Ethernet0/39
+ port link-mode bridge
+#
+interface Ethernet0/40
+ port link-mode bridge
+#
+interface Ethernet0/41
+ port link-mode bridge
+#
+interface Ethernet0/42
+ port link-mode bridge
+#               
+interface Ethernet0/43
+ port link-mode bridge
+#
+interface Ethernet0/44
+ port link-mode bridge
+#
+interface Ethernet0/45
+ port link-mode bridge
+#
+interface Ethernet0/46
+ port link-mode bridge
+#
+interface Ethernet0/47
+ port link-mode bridge
+#
+interface Ethernet0/48
+ port link-mode bridge
+#
+interface Ethernet0/49
+ port link-mode bridge
+#
+ospfv3 1
+ router-id 3.3.3.3
+ area 0.0.0.0
+#
+ ipv6 route-static 1:: 64 2::1
+ ipv6 route-static 5:: 64 4::2
+ ipv6 route-static 6:: 64 4::2
+#
+ load xml-configuration
+#
+ load tr069-configuration
+#
+user-interface tty 12
+user-interface aux 0
+user-interface vty 0 4
+ authentication-mode scheme
+#
+return
+[R2]  

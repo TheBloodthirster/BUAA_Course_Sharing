@@ -1,0 +1,152 @@
+[S1]dis cur
+#
+ version 5.20, Release 2108P01
+#
+ sysname S1
+#
+ irf mac-address persistent timer
+ irf auto-update enable
+ undo irf link-delay
+#
+ domain default enable system
+#
+ ipv6
+#
+ undo ip http enable
+#
+ password-recovery enable
+#
+vlan 1
+#
+vlan 2 to 4
+#
+domain system
+ access-limit disable
+ state active   
+ idle-cut disable
+ self-service-url disable
+#
+user-group system
+ group-attribute allow-guest
+#
+interface NULL0
+#
+interface Vlan-interface1
+ ip address dhcp-alloc client-identifier mac Vlan-interface1
+#
+interface Vlan-interface2
+ ipv6 address 1::1/64
+#
+interface Vlan-interface3
+ ipv6 address 2::1/64
+ ospfv3 1 area 0.0.0.0
+#
+interface Vlan-interface4
+ ipv6 address 3::1/64
+ ospfv3 1 area 0.0.0.0
+#
+interface Ethernet1/0/1
+ port link-mode bridge
+ port access vlan 2
+#
+interface Ethernet1/0/2
+ port link-mode bridge
+#
+interface Ethernet1/0/3
+ port link-mode bridge
+#
+interface Ethernet1/0/4
+ port link-mode bridge
+#
+interface Ethernet1/0/5
+ port link-mode bridge
+#
+interface Ethernet1/0/6
+ port link-mode bridge
+#
+interface Ethernet1/0/7
+ port link-mode bridge
+#
+interface Ethernet1/0/8
+ port link-mode bridge
+#
+interface Ethernet1/0/9
+ port link-mode bridge
+#
+interface Ethernet1/0/10
+ port link-mode bridge
+#
+interface Ethernet1/0/11
+ port link-mode bridge
+#
+interface Ethernet1/0/12
+ port link-mode bridge
+#
+interface Ethernet1/0/13
+ port link-mode bridge
+ port access vlan 3
+#
+interface Ethernet1/0/14
+ port link-mode bridge
+#
+interface Ethernet1/0/15
+ port link-mode bridge
+#               
+interface Ethernet1/0/16
+ port link-mode bridge
+#
+interface Ethernet1/0/17
+ port link-mode bridge
+#
+interface Ethernet1/0/18
+ port link-mode bridge
+#
+interface Ethernet1/0/19
+ port link-mode bridge
+#
+interface Ethernet1/0/20
+ port link-mode bridge
+#
+interface Ethernet1/0/21
+ port link-mode bridge
+#
+interface Ethernet1/0/22
+ port link-mode bridge
+#
+interface Ethernet1/0/23
+ port link-mode bridge
+#
+interface Ethernet1/0/24
+ port link-mode bridge
+ port access vlan 4
+#
+interface GigabitEthernet1/0/25
+ port link-mode bridge
+#
+interface GigabitEthernet1/0/26
+ port link-mode bridge
+#
+interface GigabitEthernet1/0/27
+ port link-mode bridge
+#
+interface GigabitEthernet1/0/28
+ port link-mode bridge
+#
+ospfv3 1
+ router-id 1.1.1.1
+ area 0.0.0.0
+#
+ ipv6 route-static 5:: 64 3::2
+ ipv6 route-static 5:: 64 4::2 preference 20
+ ipv6 route-static 6:: 64 3::2
+ ipv6 route-static 6:: 64 4::2 preference 20
+#
+ load xml-configuration
+#
+ load tr069-configuration
+#
+user-interface aux 0
+user-interface vty 0 15
+#
+return
+[S1] 
