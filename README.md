@@ -1,4 +1,4 @@
-# BUAA_Course_Sharing
+# BUAA_Course_Sharing 😀
 北京航空航天大学(北航)课程作业资料共享平台
 
 个人精力有限，有想要参与共享本项目的同学，请直接拉一个PR或者把课件发送到 zy1906408@buaa.edu.cn ，并且留下感谢署名id
