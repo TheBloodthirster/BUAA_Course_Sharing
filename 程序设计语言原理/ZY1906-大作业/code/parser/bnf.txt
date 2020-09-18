@@ -1,0 +1,84 @@
+Command ::= ε
+    | V_name := Expression
+    | Identifier ( Actual_Parameter_Sequence )
+    | Command ; Command
+    | begin Command end
+    | let Declaration in Command
+    | if Expression then Command else Command
+    | while Expression do Command
+
+Expression ::= Integer_Literal
+    | Character_Literal
+    | V_name
+    | Identifier ( Actual_Parameter_Sequence )
+    | Operator Expression
+    | Expression Operator Expression
+    | ( Expression )
+    | let Declaration in Expression
+    | if Expression then Expression else Expression
+    | { Record_Aggregate }
+    | [ Array_Aggregate ]
+
+Operator ::= +
+    | -
+    | *
+    | /
+    | %
+    | >
+    | <
+    | ==
+    | <=
+    | >=
+    | !=
+    | !
+
+Record_Aggregate ::=  ε
+    | Identifier = Expression
+    | Identifier = Expression , Record_Aggregate
+
+Array_Aggregate ::= Expression
+    | Expression , Array_Aggregate
+
+
+V_name ::= Identifier
+    | V_name . Identifier
+    | V_name [ Expression ]
+
+Declaration ::= const Identifier = Expression
+    | var Identifier : Type_denoter
+    | proc Identifier ( Formal_Parameter_Sequence ) is Command
+    | func Identifier ( Formal_Parameter_Sequence ) : Type_denoter is Expression
+    | type Identifier is Type_denoter
+    | Declaration ; Declaration
+
+Type_denoter ::= Identifier
+    | array Integer_Literal of Type_denoter
+    | record Record_Type_denoter end
+    | Char
+    | Boolean
+    | Integer
+    | Real
+
+Record_Type_denoter ::= Identifier : Type_denoter
+    | Identifier : Type_denoter , Record_Type_denoter
+
+
+Formal_Parameter_Sequence ::=  ε
+    | Formal_Parameter
+    | Formal_Parameter , Formal_Parameter_Sequence
+
+Formal_Parameter ::= Identifier : Type_denoter
+    | var Identifier : Type_denoter
+    | proc Identifier ( Formal_Parameter_Sequence )
+    | func Identifier ( Formal_Parameter_Sequence ) : Type_denoter
+
+Actual_Parameter_Sequence ::= ε
+    | Actual_Parameter
+    | Actual_Parameter , Actual_Parameter_Sequence
+
+Actual_Parameter ::= Expression
+    | var V_name
+    | proc Identifier
+    | func Identifier
+
+Program ::= Command

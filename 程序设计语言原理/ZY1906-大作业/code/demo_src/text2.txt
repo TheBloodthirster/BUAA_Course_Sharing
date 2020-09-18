@@ -1,0 +1,36 @@
+let
+    type Line is record
+        length:Integer,
+        content: array 80 of Char
+    end;
+
+    proc getline(var l:Line) is
+        begin
+            l.length := 0;
+            while !eol() do
+                begin
+                     get(var l.content[l.length]);
+                     l.length := l.length + 1;
+                end;
+            geteol();
+         end;
+
+    proc putreversedline(l:Line) is
+         let var i:Integer
+         in
+            begin
+                i := l.length;
+                while i>0 do
+                    begin
+                        i := i-1;
+                        put(l.content[i])
+                    end;
+                puteol()
+            end;
+         var currentline:Line
+in
+    while !eof() do
+        begin
+            getline(var currentline);
+            putreversedline(currentline)
+        end

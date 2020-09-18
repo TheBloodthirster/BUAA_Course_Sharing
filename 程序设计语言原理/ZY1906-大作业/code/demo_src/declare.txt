@@ -1,0 +1,12 @@
+let
+    const minchar  = chr(0);
+    var name:array 20 of Char;
+    var initial:Char;
+    proc inc(var n:Integer) is
+        n := n + 1;
+    func odd(n : Integer): Boolean is
+        (n / 2) != 0;
+    type Rational is
+        record num:Integer, den:Integer end
+in
+    ;
