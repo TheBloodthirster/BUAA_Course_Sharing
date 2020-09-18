@@ -1,0 +1,523 @@
+[R1-Ethernet0/0]quit
+[R1]bgp 100
+[R1-bgp]peer 1.1.1.2 as
+[R1-bgp]peer 1.1.1.2 as-n
+[R1-bgp]peer 1.1.1.2 as-number 300
+[R1-bgp]
+%Jul 15 09:22:21:237 2005 R1 BGP/5/BGP_STATE_CHANGED:
+ 1.1.1.2 state is changed from OPENCONFIRM to ESTABLISHED.
+
+[R1-bgp]dis ip rou
+[R1-bgp]dis ip routing-table
+Routing Tables: Public
+        Destinations : 5        Routes : 5
+
+Destination/Mask    Proto  Pre  Cost         NextHop         Interface
+
+1.1.0.0/16          Direct 0    0            1.1.1.1         Eth0/0
+1.1.1.1/32          Direct 0    0            127.0.0.1       InLoop0
+5.5.5.5/32          Direct 0    0            127.0.0.1       InLoop0
+127.0.0.0/8         Direct 0    0            127.0.0.1       InLoop0
+127.0.0.1/32        Direct 0    0            127.0.0.1       InLoop0
+
+[R1-bgp]net
+[R1-bgp]network 5.5.5.5 32
+[R1-bgp]dis ip routing-table
+Routing Tables: Public
+        Destinations : 5        Routes : 5
+
+Destination/Mask    Proto  Pre  Cost         NextHop         Interface
+
+1.1.0.0/16          Direct 0    0            1.1.1.1         Eth0/0
+1.1.1.1/32          Direct 0    0            127.0.0.1       InLoop0
+5.5.5.5/32          Direct 0    0            127.0.0.1       InLoop0
+127.0.0.0/8         Direct 0    0            127.0.0.1       InLoop0
+127.0.0.1/32        Direct 0    0            127.0.0.1       InLoop0
+
+[R1-bgp]dis ip routing-table
+Routing Tables: Public
+        Destinations : 6        Routes : 6
+
+Destination/Mask    Proto  Pre  Cost         NextHop         Interface
+
+1.1.0.0/16          Direct 0    0            1.1.1.1         Eth0/0
+1.1.1.1/32          Direct 0    0            127.0.0.1       InLoop0
+4.4.4.4/32          BGP    255  0            1.1.1.2         Eth0/0
+5.5.5.5/32          Direct 0    0            127.0.0.1       InLoop0
+127.0.0.0/8         Direct 0    0            127.0.0.1       InLoop0
+127.0.0.1/32        Direct 0    0            127.0.0.1       InLoop0
+
+[R1-bgp]ping -a 5.5.5.5 4.4.4.4
+  PING 4.4.4.4: 56  data bytes, press CTRL_C to break
+    Reply from 4.4.4.4: bytes=56 Sequence=0 ttl=253 time=1 ms
+    Reply from 4.4.4.4: bytes=56 Sequence=1 ttl=253 time=1 ms
+    Reply from 4.4.4.4: bytes=56 Sequence=2 ttl=253 time=1 ms
+    Reply from 4.4.4.4: bytes=56 Sequence=3 ttl=253 time=2 ms
+    Reply from 4.4.4.4: bytes=56 Sequence=4 ttl=253 time=1 ms
+
+  --- 4.4.4.4 ping statistics ---
+    5 packet(s) transmitted
+    5 packet(s) received
+    0.00% packet loss
+    round-trip min/avg/max = 1/1/2 ms
+
+[R1-bgp]quit
+[R1]undo bgp
+Warning : Undo BGP process? [Y/N]:y
+%Jul 15 09:31:22:744 2005 R1 BGP/5/BGP_STATE_CHANGED:
+ 1.1.1.2 state is changed from ESTABLISHED to IDLE.
+
+[R1]quit
+<R1>debug
+<R1>debug bgp ev
+<R1>debug bgp event
+<R1>ter
+<R1>terminal debu
+<R1>terminal debugging
+Info: Current terminal debugging is on.
+
+<R1>re
+<R1>res
+<R1>reset bg
+<R1>reset bgp all
+Warning : Reset BGP session? [Y/N]:y
+<R1>dis
+<R1>display bgp peer
+<R1>sys
+<R1>system-view
+System View: return to User View with Ctrl+Z.
+[R1]dis
+[R1]display bgp peer
+[R1]display bgp
+                ^
+ % Incomplete command found at '^' position.
+[R1]display bgp
+[R1]display this
+#
+ sysname R1
+#
+ domain default enable system
+#
+ dar p2p signature-file flash:/p2p_default.mtd
+#
+ port-security enable
+#
+ undo ip http enable
+#
+ password-recovery enable
+#
+ load xml-configuration
+#
+ load tr069-configuration
+#
+return
+[R1]
+[R1]
+[R1]
+[R1]
+[R1]
+[R1]
+[R1]
+[R1]
+[R1]display this
+#
+ sysname R1
+#
+ domain default enable system
+#
+ dar p2p signature-file flash:/p2p_default.mtd
+#
+ port-security enable
+#
+ undo ip http enable
+#
+ password-recovery enable
+#
+ load xml-configuration
+#
+ load tr069-configuration
+#
+return
+[R1]dis cur
+#
+ version 5.20, Release 2513P27
+#
+ sysname R1
+#
+ domain default enable system
+#
+ dar p2p signature-file flash:/p2p_default.mtd
+#
+ port-security enable
+#
+ undo ip http enable
+#
+ password-recovery enable
+#
+vlan 1
+#
+domain system
+ access-limit disable
+ state active
+ idle-cut disable
+ self-service-url disable
+#
+user-group system
+ group-attribute allow-guest
+#
+local-user admin
+ password cipher $c$3$40gC1cxf/wIJNa1ufFPJsjKAof+QP5aV
+ authorization-attribute level 3
+ service-type telnet
+#
+cwmp
+ undo cwmp enable
+#
+interface Aux0
+ async mode flow
+ link-protocol ppp
+#
+interface Cellular0/0
+ async mode protocol
+ link-protocol ppp
+#
+interface Ethernet0/0
+ port link-mode route
+ ip address 1.1.1.1 255.255.0.0
+#
+interface Ethernet0/1
+ port link-mode route
+#
+interface Serial1/0
+ link-protocol ppp
+#
+interface Serial2/0
+ link-protocol ppp
+#
+interface NULL0
+#
+interface LoopBack1
+ ip address 5.5.5.5 255.255.255.255
+#
+interface Ethernet0/2
+ port link-mode bridge
+#
+interface Ethernet0/3
+ port link-mode bridge
+#
+interface Ethernet0/4
+ port link-mode bridge
+#
+interface Ethernet0/5
+ port link-mode bridge
+#
+interface Ethernet0/6
+ port link-mode bridge
+#
+interface Ethernet0/7
+ port link-mode bridge
+#
+interface Ethernet0/8
+ port link-mode bridge
+#
+interface Ethernet0/9
+ port link-mode bridge
+#
+interface Ethernet0/10
+ port link-mode bridge
+#
+interface Ethernet0/11
+ port link-mode bridge
+#
+interface Ethernet0/12
+ port link-mode bridge
+#
+interface Ethernet0/13
+ port link-mode bridge
+#
+interface Ethernet0/14
+ port link-mode bridge
+#
+interface Ethernet0/15
+ port link-mode bridge
+#
+interface Ethernet0/16
+ port link-mode bridge
+#
+interface Ethernet0/17
+ port link-mode bridge
+#
+interface Ethernet0/18
+ port link-mode bridge
+#
+interface Ethernet0/19
+ port link-mode bridge
+#
+interface Ethernet0/20
+ port link-mode bridge
+#
+interface Ethernet0/21
+ port link-mode bridge
+#
+interface Ethernet0/22
+ port link-mode bridge
+#
+interface Ethernet0/23
+ port link-mode bridge
+#
+interface Ethernet0/24
+ port link-mode bridge
+#
+interface Ethernet0/25
+ port link-mode bridge
+#
+interface Ethernet0/26
+ port link-mode bridge
+#
+interface Ethernet0/27
+ port link-mode bridge
+#
+interface Ethernet0/28
+ port link-mode bridge
+#
+interface Ethernet0/29
+ port link-mode bridge
+#
+interface Ethernet0/30
+ port link-mode bridge
+#
+interface Ethernet0/31
+ port link-mode bridge
+#
+interface Ethernet0/32
+ port link-mode bridge
+#
+interface Ethernet0/33
+ port link-mode bridge
+#
+interface Ethernet0/34
+ port link-mode bridge
+#
+interface Ethernet0/35
+ port link-mode bridge
+
+[R1]bgp 100
+[R1-bgp]
+[R1-bgp]
+[R1-bgp]
+[R1-bgp]display thixdispaly dispalydispalasdasd
+                ^
+ % Unrecognized command found at '^' position.
+[R1-bgp]dispaly this
+        ^
+ % Unrecognized command found at '^' position.
+[R1-bgp]display this
+#
+bgp 100
+ undo synchronization
+#
+return
+[R1-bgp]peer 1.1.1.2 as
+[R1-bgp]peer 1.1.1.2 as-
+[R1-bgp]peer 1.1.1.2 as-nu
+[R1-bgp]peer 1.1.1.2 as-number 300
+[R1-bgp]dis
+[R1-bgp]display ip rou
+[R1-bgp]display ip routing-table
+Routing Tables: Public
+        Destinations : 5        Routes : 5
+
+Destination/Mask    Proto  Pre  Cost         NextHop         Interface
+
+1.1.0.0/16          Direct 0    0            1.1.1.1         Eth0/0
+1.1.1.1/32          Direct 0    0            127.0.0.1       InLoop0
+5.5.5.5/32          Direct 0    0            127.0.0.1       InLoop0
+127.0.0.0/8         Direct 0    0            127.0.0.1       InLoop0
+127.0.0.1/32        Direct 0    0            127.0.0.1       InLoop0
+
+[R1-bgp]net
+[R1-bgp]network
+*Jul 15 09:39:58:613 2005 R1 RM/6/RMDEBUG:
+ BGP.: 1.1.1.2 Current event is CRTimerExpired.
+
+*Jul 15 09:39:58:614 2005 R1 RM/6/RMDEBUG:
+ BGP.: 1.1.1.2 Current event is Start.
+
+*Jul 15 09:39:58:614 2005 R1 RM/6/RMDEBUG:
+ BGP.: 1.1.1.2 State is changed from IDLE to CONNECT.
+
+*Jul 15 09:39:58:615 2005 R1 RM/6/RMDEBUG:
+ BGP.: 1.1.1.2 Current event is TransConnOpenFailed.
+
+*Jul 15 09:39:58:615 2005 R1 RM/6/RMDEBUG:
+ BGP.: 1.1.1.2 State is changed from CONNECT to ACTIVE.
+
+*Jul 15 09:39:58:617 2005 R1 RM/6/RMDEBUG:
+ BGP.: 1.1.1.2 State is changed from ACTIVE to OPENSENT.
+
+*Jul 15 09:39:58:620 2005 R1 RM/6/RMDEBUG:
+ BGP.: 1.1.1.2 Current event is ReceiveOpenMessage.
+
+*Jul 15 09:39:58:620 2005 R1 RM/6/RMDEBUG:
+ BGP.: 1.1.1.2 State is changed from OPENSENT to OPENCONFIRM.
+
+%Jul 15 09:39:58:622 2005 R1 BGP/5/BGP_STATE_CHANGED:
+ 1.1.1.2 state is changed from OPENCONFIRM to ESTABLISHED.
+
+*Jul 15 09:39:58:723 2005 R1 RM/6/RMDEBUG:
+ BGP.: 1.1.1.2 Current event is RecvKeepAliveMessage.
+
+*Jul 15 09:39:58:824 2005 R1 RM/6/RMDEBUG:
+ BGP.: 1.1.1.2 State is changed from OPENCONFIRM to ESTABLISHED.
+
+*Jul 15 09:39:58:924 2005 R1 RM/6/RMDEBUG:
+ BGP.: 1.1.1.2 Current event is RecvUpdateMessage.
+
+                ^
+ % Incomplete command found at '^' position.
+[R1-bgp]net
+[R1-bgp]network 5.5.5.5 32
+[R1-bgp]di
+[R1-bgp]display ip rou
+[R1-bgp]display ip routing-table
+Routing Tables: Public
+        Destinations : 6        Routes : 6
+
+Destination/Mask    Proto  Pre  Cost         NextHop         Interface
+
+1.1.0.0/16          Direct 0    0            1.1.1.1         Eth0/0
+1.1.1.1/32          Direct 0    0            127.0.0.1       InLoop0
+4.4.4.4/32          BGP    255  0            1.1.1.2         Eth0/0
+5.5.5.5/32          Direct 0    0            127.0.0.1       InLoop0
+127.0.0.0/8         Direct 0    0            127.0.0.1       InLoop0
+127.0.0.1/32        Direct 0    0            127.0.0.1       InLoop0
+
+[R1-bgp]
+*Jul 15 09:41:10:449 2005 R1 RM/6/RMDEBUG:
+ BGP.: 1.1.1.2 Current event is RecvKeepAliveMessage.
+
+*Jul 15 09:41:12:613 2005 R1 RM/6/RMDEBUG:
+ BGP.: 1.1.1.2 Current event is KATimerExpired.
+
+%Jul 15 09:42:18:693 2005 R1 IFNET/3/LINK_UPDOWN: Ethernet0/0 link status is DOW
+N.
+%Jul 15 09:42:18:694 2005 R1 IFNET/5/LINEPROTO_UPDOWN: Line protocol on the inte
+rface Ethernet0/0 is DOWN.
+%Jul 15 09:42:18:694 2005 R1 BGP/5/BGP_STATE_CHANGED:
+ 1.1.1.2 state is changed from ESTABLISHED to IDLE.
+
+*Jul 15 09:42:18:695 2005 R1 RM/6/RMDEBUG:
+ BGP.: 1.1.1.2 Current event is Stop.
+
+*Jul 15 09:42:18:695 2005 R1 RM/6/RMDEBUG:
+ BGP.: 1.1.1.2 State is changed from ESTABLISHED to IDLE.
+
+*Jul 15 09:42:49:613 2005 R1 RM/6/RMDEBUG:
+ BGP.: 1.1.1.2 Current event is CRTimerExpired.
+
+*Jul 15 09:42:49:613 2005 R1 RM/6/RMDEBUG:
+ BGP.: 1.1.1.2 Current event is Start.
+
+*Jul 15 09:42:49:614 2005 R1 RM/6/RMDEBUG:
+ BGP.: 1.1.1.2 State is changed from IDLE to CONNECT.
+
+*Jul 15 09:42:49:614 2005 R1 RM/6/RMDEBUG:
+ BGP.: 1.1.1.2 Current event is TransConnOpenFailed.
+
+*Jul 15 09:42:49:615 2005 R1 RM/6/RMDEBUG:
+ BGP.: 1.1.1.2 State is changed from CONNECT to ACTIVE.
+
+*Jul 15 09:43:21:613 2005 R1 RM/6/RMDEBUG:
+ BGP.: 1.1.1.2 Current event is CRTimerExpired.
+
+*Jul 15 09:43:21:614 2005 R1 RM/6/RMDEBUG:
+ BGP.: 1.1.1.2 State is changed from ACTIVE to CONNECT.
+
+*Jul 15 09:43:21:614 2005 R1 RM/6/RMDEBUG:
+ BGP.: 1.1.1.2 Current event is TransConnOpenFailed.
+
+*Jul 15 09:43:21:615 2005 R1 RM/6/RMDEBUG:
+ BGP.: 1.1.1.2 State is changed from CONNECT to ACTIVE.
+
+%Jul 15 09:43:33:684 2005 R1 IFNET/3/LINK_UPDOWN: Ethernet0/0 link status is UP.
+
+%Jul 15 09:43:33:684 2005 R1 IFNET/5/LINEPROTO_UPDOWN: Line protocol on the inte
+rface Ethernet0/0 is UP.
+*Jul 15 09:43:51:110 2005 R1 RM/6/RMDEBUG:
+ BGP.: 1.1.1.2 State is changed from ACTIVE to OPENSENT.
+
+*Jul 15 09:43:51:113 2005 R1 RM/6/RMDEBUG:
+ BGP.: 1.1.1.2 Current event is ReceiveOpenMessage.
+
+*Jul 15 09:43:51:113 2005 R1 RM/6/RMDEBUG:
+ BGP.: 1.1.1.2 State is changed from OPENSENT to OPENCONFIRM.
+
+%Jul 15 09:43:51:116 2005 R1 BGP/5/BGP_STATE_CHANGED:
+ 1.1.1.2 state is changed from OPENCONFIRM to ESTABLISHED.
+
+*Jul 15 09:43:51:117 2005 R1 RM/6/RMDEBUG:
+ BGP.: 1.1.1.2 Current event is RecvKeepAliveMessage.
+
+*Jul 15 09:43:51:117 2005 R1 RM/6/RMDEBUG:
+ BGP.: 1.1.1.2 State is changed from OPENCONFIRM to ESTABLISHED.
+
+*Jul 15 09:43:51:119 2005 R1 RM/6/RMDEBUG:
+ BGP.: 1.1.1.2 Current event is RecvUpdateMessage.
+
+[R1-bgp]
+[R1-bgp]quit
+[R1]inter e0/0
+[R1-Ethernet0/0]undo ip addr 1.1.1.1 16
+[R1-Ethernet0/0]
+%Jul 15 09:44:48:872 2005 R1 BGP/5/BGP_STATE_CHANGED:
+ 1.1.1.2 state is changed from ESTABLISHED to IDLE.
+
+*Jul 15 09:44:48:872 2005 R1 RM/6/RMDEBUG:
+ BGP.: 1.1.1.2 Current event is Stop.
+
+*Jul 15 09:44:48:873 2005 R1 RM/6/RMDEBUG:
+ BGP.: 1.1.1.2 State is changed from ESTABLISHED to IDLE.
+
+*Jul 15 09:45:14:613 2005 R1 RM/6/RMDEBUG:
+ BGP.: 1.1.1.2 Current event is CRTimerExpired.
+
+*Jul 15 09:45:14:614 2005 R1 RM/6/RMDEBUG:
+ BGP.: 1.1.1.2 Current event is Start.
+
+*Jul 15 09:45:14:614 2005 R1 RM/6/RMDEBUG:
+ BGP.: 1.1.1.2 State is changed from IDLE to CONNECT.
+
+*Jul 15 09:45:14:615 2005 R1 RM/6/RMDEBUG:
+ BGP.: 1.1.1.2 Current event is TransConnOpenFailed.
+
+*Jul 15 09:45:14:615 2005 R1 RM/6/RMDEBUG:
+ BGP.: 1.1.1.2 State is changed from CONNECT to ACTIVE.
+
+[R1-Ethernet0/0]ip addr 1.1.1.1 16
+[R1-Ethernet0/0]
+*Jul 15 09:45:48:189 2005 R1 RM/6/RMDEBUG:
+ BGP.: 1.1.1.2 State is changed from ACTIVE to OPENSENT.
+
+*Jul 15 09:45:48:190 2005 R1 RM/6/RMDEBUG:
+ BGP.: 1.1.1.2 Current event is ReceiveOpenMessage.
+
+*Jul 15 09:45:48:191 2005 R1 RM/6/RMDEBUG:
+ BGP.: 1.1.1.2 State is changed from OPENSENT to OPENCONFIRM.
+
+%Jul 15 09:45:48:241 2005 R1 BGP/5/BGP_STATE_CHANGED:
+ 1.1.1.2 state is changed from OPENCONFIRM to ESTABLISHED.
+
+*Jul 15 09:45:48:241 2005 R1 RM/6/RMDEBUG:
+ BGP.: 1.1.1.2 Current event is RecvKeepAliveMessage.
+
+*Jul 15 09:45:48:242 2005 R1 RM/6/RMDEBUG:
+ BGP.: 1.1.1.2 State is changed from OPENCONFIRM to ESTABLISHED.
+
+*Jul 15 09:45:48:244 2005 R1 RM/6/RMDEBUG:
+ BGP.: 1.1.1.2 Current event is RecvUpdateMessage.
+
+*Jul 15 09:46:55:613 2005 R1 RM/6/RMDEBUG:
+ BGP.: 1.1.1.2 Current event is KATimerExpired.
+
+*Jul 15 09:46:59:426 2005 R1 RM/6/RMDEBUG:
+ BGP.: 1.1.1.2 Current event is RecvKeepAliveMessage.

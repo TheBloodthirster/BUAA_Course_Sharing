@@ -1,0 +1,176 @@
+
+<S2>    
+#Jan  1 05:50:58:459 2010 S2 SHELL/4/LOGIN:                                           
+ Trap 1.3.6.1.4.1.25506.2.2.1.1.3.0.1<hh3cLogIn>: login from Console                                                                    
+<S2>    
+%Jan  1 05:50:58:599 2010 S2 SHELL/5/SHELL_LOGIN: Console logged in from aux0.                                                                              
+<S2>sys       
+System View: return to User View with Ctrl+Z.                                             
+[S2]dis cur           
+# 
+ version 5.20, Release 2108P01                              
+# 
+ sysname S2           
+# 
+ irf mac-address persistent timer                                 
+ irf auto-update enable                       
+ undo irf link-delay                    
+# 
+ domain default enable system                             
+# 
+ ip ttl-expires enable                      
+ ip unreachables enable                       
+# 
+ undo ip http enable                    
+# 
+ multicast routing-ena                    
+# 
+ password-recovery enable                         
+# 
+vlan 1      
+# 
+vlan 3 to 5           
+# 
+vlan 30       
+# 
+domain system             
+ access-limit disable                     
+ state active             
+ idle-cut disable                 
+ self-service-url disable                         
+# 
+user-group system                 
+ group-attribute allow-guest                            
+# 
+interface NULL0               
+# 
+interface Vlan-interface1                         
+# 
+interface Vlan-interface3                         
+ ip address 10.3.1.1 255.255.255.0                                  
+ igmp enable            
+ pim dm       
+# 
+interface Vlan-interface4                         
+ ip address 10.3.2.1 255.255.255.0                                  
+ igmp enable            
+ pim dm       
+# 
+interface Vlan-interface5                         
+ ip address 192.168.3.2 255.255.255.0                                     
+ pim dm       
+# 
+interface Ethernet1/0/1                       
+ port link-mode bridge                      
+ port link-type trunk                     
+ port trunk permit vlan 1 3 to 5                                
+# 
+interface Ethernet1/0/2                       
+ port link-mode bridge                      
+# 
+interface Ethernet1/0/3                       
+ port link-mode bridge                      
+# 
+interface Ethernet1/0/4                       
+ port link-mode bridge                      
+# 
+interface Ethernet1/0/5                       
+ port link-mode bridge                      
+# 
+interface Ethernet1/0/6                       
+ port link-mode bridge                      
+# 
+interface Ethernet1/0/7                       
+ port link-mode bridge                      
+# 
+interface Ethernet1/0/8                       
+ port link-mode bridge                      
+# 
+interface Ethernet1/0/9                       
+ port link-mode bridge                      
+# 
+interface Ethernet1/0/10                        
+ port link-mode bridge                      
+# 
+interface Ethernet1/0/11                        
+ port link-mode bridge                      
+# 
+interface Ethernet1/0/12                        
+ port link-mode bridge                      
+# 
+interface Ethernet1/0/13                        
+ port link-mode bridge                      
+# 
+interface Ethernet1/0/14                        
+ port link-mode bridge                      
+# 
+interface Ethernet1/0/15                        
+ port link-mode bridge                      
+# 
+interface Ethernet1/0/16                        
+ port link-mode bridge                      
+# 
+interface Ethernet1/0/17                        
+ port link-mode bridge                      
+# 
+interface Ethernet1/0/18                        
+ port link-mode bridge                      
+# 
+interface Ethernet1/0/19                        
+ port link-mode bridge                      
+# 
+interface Ethernet1/0/20                        
+ port link-mode bridge                      
+# 
+interface Ethernet1/0/21                        
+ port link-mode bridge                      
+# 
+interface Ethernet1/0/22                        
+ port link-mode bridge                      
+# 
+interface Ethernet1/0/23                        
+ port link-mode bridge                      
+ port access vlan 3                   
+# 
+interface Ethernet1/0/24                        
+ port link-mode bridge                      
+ port access vlan 4                   
+# 
+interface GigabitEthernet1/0/25                               
+ port link-mode bridge                      
+# 
+interface GigabitEthernet1/0/26                               
+ port link-mode bridge                      
+# 
+interface GigabitEthernet1/0/27                               
+ port link-mode bridge                      
+# 
+interface GigabitEthernet1/0/28                               
+ port link-mode bridge                      
+# 
+ospf 1      
+ area 0.0.0.0             
+  network 10.3.1.0 0.0.0.255
+  network 10.3.2.0 0.0.0.255
+  network 192.168.3.0 0.0.0.255
+#
+ snmp-agent
+ snmp-agent local-engineid 800063A2033C8C402B3DF9
+ snmp-agent community read public
+ snmp-agent community write private
+ snmp-agent sys-info version all
+ snmp-agent target-host trap address udp-domain 10.3.1.2 params securityname pub
+lic
+ snmp-agent trap enable default-route
+#
+ load xml-configuration
+#
+ load tr069-configuration
+#
+user-interface aux 0
+user-interface vty 0 15
+#
+Return
+[S2]
+[S2]
+[S2]

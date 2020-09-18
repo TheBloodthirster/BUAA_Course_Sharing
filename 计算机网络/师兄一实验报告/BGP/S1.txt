@@ -1,0 +1,320 @@
+
+
+<H3C>
+#Jan  1 17:42:20:893 2010 H3C SHELL/4/LOGIN:
+ Trap 1.3.6.1.4.1.25506.2.2.1.1.3.0.1<hh3cLogIn>: login from Console
+<H3C>
+%Jan  1 17:42:21:033 2010 H3C SHELL/5/SHELL_LOGIN: Console logged in from aux0.
+<H3C>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<H3C>
+<H3C>
+#Jan  1 00:10:05:069 2010 H3C SHELL/4/LOGIN:
+ Trap 1.3.6.1.4.1.25506.2.2.1.1.3.0.1<hh3cLogIn>: login from Console
+%Jan  1 00:10:05:209 2010 H3C SHELL/5/SHELL_LOGIN: Console logged in from aux0.
+<H3C>display version
+H3C Comware Platform Software
+Comware Software, Version 5.20, Release 2108P01
+Copyright (c) 2004-2013 Hangzhou H3C Tech. Co., Ltd. All rights reserved.
+H3C S3600V2-28TP-EI uptime is 0 week, 0 day, 0 hour, 10 minutes
+
+H3C S3600V2-28TP-EI with 1 Processor
+256M    bytes SDRAM
+2M      bytes Nor Flash Memory
+128M    bytes Nand Flash Memory
+Config Register points to Nand Flash
+
+Hardware Version is Ver.A
+CPLD Version is 001
+BootRom Version is 125
+[SubSlot 0] 24FE+4SFP+2Combo GE Hardware Version is Ver.A
+
+<H3C> reboot
+ Start to check configuration with next startup configuration file, please wait.
+........DONE!
+ This command will reboot the device. Current configuration will be lost, save c
+urrent configuration? [Y/N]:N
+ This command will reboot the device. Continue? [Y/N]:Y
+#Jan  1 00:11:21:904 2010 H3C DEVM/1/REBOOT:
+ Reboot device by command.
+
+%Jan  1 00:11:21:994 2010 H3C DEVM/5/SYSTEM_REBOOT: System is rebooting now.
+Starting......
+Press Ctrl+D to access BASIC BOOT MENU
+
+    ************************************************************************
+    *                                                                      *
+    *              H3C S3600V2-28TP-EI BOOTROM, Version 125                *
+    *                                                                      *
+    ************************************************************************
+    Copyright (c) 2004-2012 Hangzhou H3C Technologies Co., Ltd.
+
+    Creation Date       : Dec 27 2012, 11:42:34
+    CPU Clock Speed     : 600MHz
+    Memory Size         : 256MB
+    Flash Size          : 128MB
+    CPLD Version        : 001
+    PCB Version         : Ver.A
+    Mac Address         : 3c8c4068d394
+
+
+Press Ctrl-B to enter Extended Boot menu...0
+Starting to get the main application file--flash:/S3600V2_E-CMW520-R2108P01.
+bin!...........................................................................
+...............................................................................
+....................................
+The main application file is self-decompressing................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+.................................Done!
+System is starting...
+Startup configuration file does not exist.
+It will take a long time to get configuration file, please wait...
+Press CTRL_C to break
+
+Retrieving configuration file failed!
+
+User interface aux0 is available.
+
+
+
+Press ENTER to get started.
+<H3C>
+#Jan  1 00:15:11:285 2010 H3C SHELL/4/LOGIN:
+ Trap 1.3.6.1.4.1.25506.2.2.1.1.3.0.1<hh3cLogIn>: login from Console
+%Jan  1 00:15:11:425 2010 H3C SHELL/5/SHELL_LOGIN: Console logged in from aux0.
+<H3C>SYS
+<H3C>system-view
+System View: return to User View with Ctrl+Z.
+[H3C]sysn
+[H3C]sysname S1
+[S1]
+%Jan  1 00:16:22:987 2010 S1 IFNET/3/LINK_UPDOWN: Ethernet1/0/1 link status is U
+P.s
+%Jan  1 00:16:23:088 2010 S1 IFNET/3/LINK_UPDOWN: Vlan-interface1 link status is
+ UP.
+%Jan  1 00:16:23:188 2010 S1 IFNET/5/LINEPROTO_UPDOWN: Line protocol on the inte
+rface Vlan-interface1 is UP.i
+%Jan  1 00:16:23:329 2010 S1 LLDP/6/LLDP_CREATE_NEIGHBOR: New neighbor created o
+n Port Ethernet1/0/1 (IfIndex 9371648), Chassis ID is 3891-d572-4997, Port ID is
+ Ethernet1/0/1.
+%Jan  1 00:16:24:259 2010 S1 IFNET/3/LINK_UPDOWN: Ethernet1/0/2 link status is U
+
+%Jan  1 00:16:25:364 2010 S1 LLDP/6/LLDP_CREATE_NEIGHBOR: New neighbor created o
+n Port Ethernet1/0/2 (IfIndex 9371649), Chassis ID is 3891-d572-4997, Port ID is
+ Ethernet1/0/2.
+[S1]dis
+[S1]display cur
+#
+ version 5.20, Release 2108P01
+#
+ sysname S1
+#
+ irf mac-address persistent timer
+ irf auto-update enable
+ undo irf link-delay
+#
+ domain default enable system
+#
+ undo ip http enable
+#
+ password-recovery enable
+#
+vlan 1
+#
+domain system
+ access-limit disable
+ state active
+ idle-cut disable
+ self-service-url disable
+#
+
+[S1]vlan 2
+[S1-vlan2]port e1/0/1
+[S1-vlan2]vlan 3
+[S1-vlan3]port e1/0/2
+[S1-vlan3]
+%Jan  1 00:18:23:122 2010 S1 IFNET/3/LINK_UPDOWN: Vlan-interface1 link status is
+ DOWN.
+%Jan  1 00:18:23:239 2010 S1 IFNET/5/LINEPROTO_UPDOWN: Line protocol on the inte
+rface Vlan-interface1 is DOWN.
+[S1-vlan3]inter vlan 2
+[S1-Vlan-interface2]
+%Jan  1 00:18:43:952 2010 S1 IFNET/3/LINK_UPDOWN: Vlan-interface2 link status is
+ UP.
+%Jan  1 00:18:44:071 2010 S1 IFNET/5/LINEPROTO_UPDOWN: Line protocol on the inte
+rface Vlan-interface2 is UP.
+[S1-Vlan-interface2]ip addr 1.1.1.2 16
+[S1-Vlan-interface2]inter vlan 3
+[S1-Vlan-interface3]
+%Jan  1 00:19:03:936 2010 S1 IFNET/3/LINK_UPDOWN: Vlan-interface3 link status is
+ UP.
+%Jan  1 00:19:04:057 2010 S1 IFNET/5/LINEPROTO_UPDOWN: Line protocol on the inte
+rface Vlan-interface3 is UP.
+[S1-Vlan-interface3]ip addr 3.1.1.1 16
+[S1-Vlan-interface3]quit
+[S1]bgp 300
+[S1-bgp]peer 1.1.1.1 as-n
+[S1-bgp]peer 1.1.1.1 as-number 100
+[S1-bgp]peer 3.1.1.2 as-nu
+[S1-bgp]peer 3.1.1.2 as-number 300
+[S1-bgp]peer 3.1.
+%Jan  1 00:22:33:985 2010 S1 BGP/5/BGP_STATE_CHANGED:
+ 1.1.1.1 state is changed from OPENCONFIRM to ESTABLISHED.
+1.2 n
+[S1-bgp]peer 3.1.1.2 next-hop-local
+[S1-bgp]
+%Jan  1 00:22:47:976 2010 S1 BGP/5/BGP_STATE_CHANGED:
+ 3.1.1.2 state is changed from OPENCONFIRM to ESTABLISHED.
+
+[S1-bgp]
+[S1-bgp]
+%Jan  1 00:31:35:512 2010 S1 BGP/5/BGP_STATE_CHANGED:
+ 1.1.1.1 state is changed from ESTABLISHED to IDLE.
+
+[S1-bgp]
+%Jan  1 00:40:11:408 2010 S1 BGP/5/BGP_STATE_CHANGED:
+ 1.1.1.1 state is changed from OPENCONFIRM to ESTABLISHED.
+
+[S1-bgp]quit
+[S1]dis
+[S1]display bgp peer
+
+ BGP local router ID : 3.1.1.1
+ Local AS number : 300
+ Total number of peers : 2                Peers in established state : 2
+
+  Peer                    AS  MsgRcvd  MsgSent OutQ PrefRcv Up/Down  State
+
+  1.1.1.1                100        4        5    0       1 00:01:40 Established
+
+  3.1.1.2                300       18       22    0       1 00:19:04 Established
+
+[S1]
+%Jan  1 00:42:28:075 2010 S1 IFNET/3/LINK_UPDOWN: Ethernet1/0/1 link status is D
+OWN.
+%Jan  1 00:42:28:186 2010 S1 IFNET/3/LINK_UPDOWN: Vlan-interface2 link status is
+ DOWN.
+%Jan  1 00:42:28:296 2010 S1 IFNET/5/LINEPROTO_UPDOWN: Line protocol on the inte
+rface Vlan-interface2 is DOWN.
+%Jan  1 00:42:28:436 2010 S1 BGP/5/BGP_STATE_CHANGED:
+ 1.1.1.1 state is changed from ESTABLISHED to IDLE.
+
+[S1]display bgp peer
+
+ BGP local router ID : 3.1.1.1
+ Local AS number : 300
+ Total number of peers : 2                Peers in established state : 1
+
+  Peer                    AS  MsgRcvd  MsgSent OutQ PrefRcv Up/Down  State
+
+  1.1.1.1                100        0        0    0       0 00:00:16 Idle
+  3.1.1.2                300       19       24    0       1 00:19:57 Established
+
+[S1]
+%Jan  1 00:43:42:179 2010 S1 IFNET/3/LINK_UPDOWN: Ethernet1/0/1 link status is U
+P.
+%Jan  1 00:43:42:280 2010 S1 IFNET/3/LINK_UPDOWN: Vlan-interface2 link status is
+ UP.
+%Jan  1 00:43:42:380 2010 S1 IFNET/5/LINEPROTO_UPDOWN: Line protocol on the inte
+rface Vlan-interface2 is UP.
+%Jan  1 00:43:42:511 2010 S1 LLDP/6/LLDP_CREATE_NEIGHBOR: New neighbor created o
+n Port Ethernet1/0/1 (IfIndex 9371648), Chassis ID is 3891-d572-4997, Port ID is
+ Ethernet1/0/1.
+[S1]display bgp peer
+
+ BGP local router ID : 3.1.1.1
+ Local AS number : 300
+ Total number of peers : 2                Peers in established state : 1
+
+  Peer                    AS  MsgRcvd  MsgSent OutQ PrefRcv Up/Down  State
+
+  1.1.1.1                100        0        0    0       0 00:01:22 Active
+  3.1.1.2                300       20       25    0       1 00:21:03 Established
+
+[S1]
+%Jan  1 00:44:03:910 2010 S1 BGP/5/BGP_STATE_CHANGED:
+ 1.1.1.1 state is changed from OPENCONFIRM to ESTABLISHED.
+
+[S1]display bgp peer
+
+ BGP local router ID : 3.1.1.1
+ Local AS number : 300
+ Total number of peers : 2                Peers in established state : 2
+
+  Peer                    AS  MsgRcvd  MsgSent OutQ PrefRcv Up/Down  State
+
+  1.1.1.1                100        3        3    0       1 00:00:29 Established
+
+  3.1.1.2                300       20       26    0       1 00:21:45 Established
+
+[S1]
+%Jan  1 00:45:01:670 2010 S1 BGP/5/BGP_STATE_CHANGED:
+ 1.1.1.1 state is changed from ESTABLISHED to IDLE.
+
+[S1]display bgp peer
+
+ BGP local router ID : 3.1.1.1
+ Local AS number : 300
+ Total number of peers : 2                Peers in established state : 1
+
+  Peer                    AS  MsgRcvd  MsgSent OutQ PrefRcv Up/Down  State
+
+  1.1.1.1                100        1        0    0       0 00:00:20 Idle
+  3.1.1.2                300       21       28    0       1 00:22:34 Established
+
+[S1]display bgp peer
+
+ BGP local router ID : 3.1.1.1
+ Local AS number : 300
+ Total number of peers : 2                Peers in established state : 1
+
+  Peer                    AS  MsgRcvd  MsgSent OutQ PrefRcv Up/Down  State
+
+  1.1.1.1                100        1        0    0       0 00:00:44 Active
+  3.1.1.2                300       21       28    0       1 00:22:58 Established
+
+[S1]
+%Jan  1 00:46:01:039 2010 S1 BGP/5/BGP_STATE_CHANGED:
+ 1.1.1.1 state is changed from OPENCONFIRM to ESTABLISHED.

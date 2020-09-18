@@ -1,0 +1,414 @@
+%Jan  1 05:38:10:047 2010 S1 IFNET/3/LINK_UPDOWN: Ethernet1/0/1 link status is UP.
+%Jan  1 05:38:10:158 2010 S1 IFNET/3/LINK_UPDOWN: Vlan-interface1 link status is UP.
+%Jan  1 05:38:10:258 2010 S1 IFNET/5/LINEPROTO_UPDOWN: Line protocol on the interface Vlan-interface1 is UP.
+%Jan  1 05:38:10:389 2010 S1 IFNET/3/LINK_UPDOWN: Vlan-interface3 link status is UP.
+%Jan  1 05:38:10:489 2010 S1 IFNET/5/LINEPROTO_UPDOWN: Line protocol on the interface Vlan-interface3 is UP.
+%Jan  1 05:38:10:620 2010 S1 IFNET/3/LINK_UPDOWN: Vlan-interface5 link status is UP.
+%Jan  1 05:38:10:720 2010 S1 IFNET/5/LINEPROTO_UPDOWN: Line protocol on the interface Vlan-interface5 is UP.
+%Jan  1 05:38:10:850 2010 S1 OSPF/5/OSPF_NBR_CHG: OSPF 1 Neighbor 192.168.3.2(Vlan-interface5) from Loading to Full.
+%Jan  1 05:38:10:991 2010 S1 LLDP/6/LLDP_CREATE_NEIGHBOR: New neighbor created on Port Ethernet1/0/1 (IfIndex 9371648), Chassis ID is 3c8c-402b-2c1c, Port ID is Ethernet1/0/1.
+#Jan  1 05:38:11:211 2010 S1 OSPF/5/MAXAGE_LSA: OSPF TrapID1.3.6.1.2.1.14.16.2.13<ospfMaxAgeLsa>: Aged a LSA Area Id 0.0.0.0 LsdbType 2 LsdbLsid 192.168.3.1 LsdbRouterId 192.168.100.1 Router 192.168.100.1 .
+%Jan  1 05:38:11:711 2010 S1 PIM/5/PIM_NBR_UP: (public net): PIM-NBR change: Neighbor 192.168.3.2(Vlan-interface5) is up. (P061859)
+#Jan  1 05:38:13:928 2010 S1 OSPF/6/ORIGINATE_LSA: OSPF TrapID1.3.6.1.2.1.14.16.2.12<ospfOriginateLsa>: Originate new LSA AreaId 0.0.0.0 LsdbType 1 LsdbLsid 192.168.100.1 LsdbRouterId 192.168.100.1 Router 192.168.100.1.
+%Jan  1 05:38:41:171 2010 S1 PIM/5/PIM_NBR_DOWN: (public net): PIM-NBR change: Neighbor 192.168.100.3(Vlan-interface100) is down. (P06440)
+#Jan  1 05:38:57:176 2010 S1 IFNET/4/INTERFACE UPDOWN: 
+ Trap 1.3.6.1.6.3.1.1.5.3<linkDown>: Interface 9371648 is Down, ifAdminStatus is 1, ifOperStatus is 2  
+#Jan  1 05:38:57:376 2010 S1 IFNET/4/INTERFACE UPDOWN: 
+ Trap 1.3.6.1.6.3.1.1.5.3<linkDown>: Interface 96075776 is Down, ifAdminStatus is 1, ifOperStatus is 2  
+#Jan  1 05:38:57:577 2010 S1 IFNET/4/INTERFACE UPDOWN: 
+ Trap 1.3.6.1.6.3.1.1.5.3<linkDown>: Interface 96075778 is Down, ifAdminStatus is 1, ifOperStatus is 2  
+#Jan  1 05:38:57:778 2010 S1 IFNET/4/INTERFACE UPDOWN: 
+ Trap 1.3.6.1.6.3.1.1.5.3<linkDown>: Interface 96075780 is Down, ifAdminStatus is 1, ifOperStatus is 2  
+#Jan  1 05:38:57:978 2010 S1 OSPF/6/ORIGINATE_LSA: OSPF TrapID1.3.6.1.2.1.14.16.2.12<ospfOriginateLsa>: Originate new LSA AreaId 0.0.0.0 LsdbType 1 LsdbLsid 192.168.100.1 LsdbRouterId 192.168.100.1 Router 192.168.100.1.
+%Jan  1 05:38:58:249 2010 S1 IFNET/3/LINK_UPDOWN: Ethernet1/0/1 link status is DOWN.
+%Jan  1 05:38:58:349 2010 S1 IFNET/3/LINK_UPDOWN: Vlan-interface1 link status is DOWN.
+%Jan  1 05:38:58:459 2010 S1 IFNET/5/LINEPROTO_UPDOWN: Line protocol on the interface Vlan-interface1 is DOWN.
+%Jan  1 05:38:58:600 2010 S1 IFNET/3/LINK_UPDOWN: Vlan-interface3 link status is DOWN.
+%Jan  1 05:38:58:710 2010 S1 IFNET/5/LINEPROTO_UPDOWN: Line protocol on the interface Vlan-interface3 is DOWN.
+%Jan  1 05:38:58:861 2010 S1 IFNET/3/LINK_UPDOWN: Vlan-interface5 link status is DOWN.
+%Jan  1 05:38:58:971 2010 S1 IFNET/5/LINEPROTO_UPDOWN: Line protocol on the interface Vlan-interface5 is DOWN.
+%Jan  1 05:38:59:111 2010 S1 PIM/5/PIM_NBR_DOWN: (public net): PIM-NBR change: Neighbor 192.168.3.2(Vlan-interface5) is down. (P06440)
+%Jan  1 05:38:59:282 2010 S1 OSPF/5/OSPF_NBR_CHG: OSPF 1 Neighbor 192.168.3.2(Vlan-interface5) from Full to Down.
+%Jan  1 05:40:41:191 2010 S1 LLDP/5/LLDP_NEIGHBOR_AGE_OUT: Neighbor aged out on Port Ethernet1/0/1 (IfIndex 9371648), Chassis ID is 3c8c-402b-2c1c, Port ID is Ethernet1/0/1.
+#Jan  1 05:41:09:808 2010 S1 IFNET/4/INTERFACE UPDOWN: 
+ Trap 1.3.6.1.6.3.1.1.5.4<linkUp>: Interface 9371648 is Up, ifAdminStatus is 1, ifOperStatus is 1  
+#Jan  1 05:41:09:998 2010 S1 IFNET/4/INTERFACE UPDOWN: 
+ Trap 1.3.6.1.6.3.1.1.5.4<linkUp>: Interface 96075776 is Up, ifAdminStatus is 1, ifOperStatus is 1  
+#Jan  1 05:41:10:192 2010 S1 IFNET/4/INTERFACE UPDOWN: 
+ Trap 1.3.6.1.6.3.1.1.5.4<linkUp>: Interface 96075778 is Up, ifAdminStatus is 1, ifOperStatus is 1  
+#Jan  1 05:41:10:383 2010 S1 IFNET/4/INTERFACE UPDOWN: 
+ Trap 1.3.6.1.6.3.1.1.5.4<linkUp>: Interface 96075780 is Up, ifAdminStatus is 1, ifOperStatus is 1  
+#Jan  1 05:41:10:574 2010 S1 OSPF/6/ORIGINATE_LSA: OSPF TrapID1.3.6.1.2.1.14.16.2.12<ospfOriginateLsa>: Originate new LSA AreaId 0.0.0.0 LsdbType 1 LsdbLsid 192.168.100.1 LsdbRouterId 192.168.100.1 Router 192.168.100.1.
+%Jan  1 05:41:10:844 2010 S1 IFNET/3/LINK_UPDOWN: Ethernet1/0/1 link status is UP.
+%Jan  1 05:41:10:954 2010 S1 IFNET/3/LINK_UPDOWN: Vlan-interface1 link status is UP.
+%Jan  1 05:41:11:055 2010 S1 IFNET/5/LINEPROTO_UPDOWN: Line protocol on the interface Vlan-interface1 is UP.
+%Jan  1 05:41:11:185 2010 S1 IFNET/3/LINK_UPDOWN: Vlan-interface3 link status is UP.
+%Jan  1 05:41:11:286 2010 S1 IFNET/5/LINEPROTO_UPDOWN: Line protocol on the interface Vlan-interface3 is UP.
+%Jan  1 05:41:11:416 2010 S1 IFNET/3/LINK_UPDOWN: Vlan-interface5 link status is UP.
+%Jan  1 05:41:11:516 2010 S1 IFNET/5/LINEPROTO_UPDOWN: Line protocol on the interface Vlan-interface5 is UP.
+%Jan  1 05:41:11:647 2010 S1 PIM/5/PIM_NBR_UP: (public net): PIM-NBR change: Neighbor 192.168.3.2(Vlan-interface5) is up. (P061859)
+%Jan  1 05:41:11:808 2010 S1 LLDP/6/LLDP_CREATE_NEIGHBOR: New neighbor created on Port Ethernet1/0/1 (IfIndex 9371648), Chassis ID is 3c8c-402b-2c1c, Port ID is Ethernet1/0/1.
+#Jan  1 05:41:49:192 2010 S1 OSPF/6/ORIGINATE_LSA: OSPF TrapID1.3.6.1.2.1.14.16.2.12<ospfOriginateLsa>: Originate new LSA AreaId 0.0.0.0 LsdbType 1 LsdbLsid 192.168.100.1 LsdbRouterId 192.168.100.1 Router 192.168.100.1.
+#Jan  1 05:41:49:462 2010 S1 OSPF/6/ORIGINATE_LSA: OSPF TrapID1.3.6.1.2.1.14.16.2.12<ospfOriginateLsa>: Originate new LSA AreaId 0.0.0.0 LsdbType 2 LsdbLsid 192.168.3.1 LsdbRouterId 192.168.100.1 Router 192.168.100.1.
+%Jan  1 05:41:49:733 2010 S1 OSPF/5/OSPF_NBR_CHG: OSPF 1 Neighbor 192.168.3.2(Vlan-interface5) from Loading to Full.
+#Jan  1 05:41:50:118 2010 S1 OSPF/5/MAXAGE_LSA: OSPF TrapID1.3.6.1.2.1.14.16.2.13<ospfMaxAgeLsa>: Aged a LSA Area Id 0.0.0.0 LsdbType 2 LsdbLsid 192.168.3.2 LsdbRouterId 10.134.136.221 Router 192.168.100.1 .
+#Jan  1 05:41:54:118 2010 S1 OSPF/5/MAXAGE_LSA: OSPF TrapID1.3.6.1.2.1.14.16.2.13<ospfMaxAgeLsa>: Aged a LSA Area Id 0.0.0.0 LsdbType 2 LsdbLsid 192.168.3.2 LsdbRouterId 10.134.136.221 Router 192.168.100.1 .
+#Jan  1 05:41:54:379 2010 S1 OSPF/6/ORIGINATE_LSA: OSPF TrapID1.3.6.1.2.1.14.16.2.12<ospfOriginateLsa>: Originate new LSA AreaId 0.0.0.0 LsdbType 1 LsdbLsid 192.168.100.1 LsdbRouterId 192.168.100.1 Router 192.168.100.1.
+#Jan  1 05:41:58:937 2010 S1 OSPF/6/ORIGINATE_LSA: OSPF TrapID1.3.6.1.2.1.14.16.2.12<ospfOriginateLsa>: Originate new LSA AreaId 0.0.0.0 LsdbType 2 LsdbLsid 192.168.3.1 LsdbRouterId 192.168.100.1 Router 192.168.100.1.
+#Jan  1 05:43:05:691 2010 S1 IFNET/4/INTERFACE UPDOWN: 
+ Trap 1.3.6.1.6.3.1.1.5.3<linkDown>: Interface 9371648 is Down, ifAdminStatus is 1, ifOperStatus is 2  
+#Jan  1 05:43:05:892 2010 S1 IFNET/4/INTERFACE UPDOWN: 
+ Trap 1.3.6.1.6.3.1.1.5.3<linkDown>: Interface 9371671 is Down, ifAdminStatus is 1, ifOperStatus is 2  
+#Jan  1 05:43:06:093 2010 S1 IFNET/4/INTERFACE UPDOWN: 
+ Trap 1.3.6.1.6.3.1.1.5.3<linkDown>: Interface 9371670 is Down, ifAdminStatus is 1, ifOperStatus is 2  
+#Jan  1 05:43:06:294 2010 S1 IFNET/4/INTERFACE UPDOWN: 
+ Trap 1.3.6.1.6.3.1.1.5.3<linkDown>: Interface 96075776 is Down, ifAdminStatus is 1, ifOperStatus is 2  
+#Jan  1 05:43:06:494 2010 S1 IFNET/4/INTERFACE UPDOWN: 
+ Trap 1.3.6.1.6.3.1.1.5.3<linkDown>: Interface 96075778 is Down, ifAdminStatus is 1, ifOperStatus is 2  
+#Jan  1 05:43:06:695 2010 S1 IFNET/4/INTERFACE UPDOWN: 
+ Trap 1.3.6.1.6.3.1.1.5.3<linkDown>: Interface 96075780 is Down, ifAdminStatus is 1, ifOperStatus is 2  
+#Jan  1 05:43:06:906 2010 S1 IFNET/4/INTERFACE UPDOWN: 
+ Trap 1.3.6.1.6.3.1.1.5.3<linkDown>: Interface 96075875 is Down, ifAdminStatus is 1, ifOperStatus is 2  
+#Jan  1 05:43:07:117 2010 S1 OSPF/5/IF_STATE_CHANGE: OSPF TrapID1.3.6.1.2.1.14.16.2.16<ospfIfStateChange>: Non-virtual interface 192.168.3.1 index 0 Router 192.168.100.1 state change to 1.
+#Jan  1 05:43:07:347 2010 S1 OSPF/6/ORIGINATE_LSA: OSPF TrapID1.3.6.1.2.1.14.16.2.12<ospfOriginateLsa>: Originate new LSA AreaId 0.0.0.0 LsdbType 1 LsdbLsid 192.168.100.1 LsdbRouterId 192.168.100.1 Router 192.168.100.1.
+#Jan  1 05:43:07:618 2010 S1 OSPF/5/IF_STATE_CHANGE: OSPF TrapID1.3.6.1.2.1.14.16.2.16<ospfIfStateChange>: Non-virtual interface 192.168.100.1 index 0 Router 192.168.100.1 state change to 1.
+#Jan  1 05:43:07:858 2010 S1 OSPF/5/MAXAGE_LSA: OSPF TrapID1.3.6.1.2.1.14.16.2.13<ospfMaxAgeLsa>: Aged a LSA Area Id 0.0.0.0 LsdbType 1 LsdbLsid 192.168.100.1 LsdbRouterId 192.168.100.1 Router 192.168.100.1 .
+#Jan  1 05:43:08:119 2010 S1 OSPF/5/MAXAGE_LSA: OSPF TrapID1.3.6.1.2.1.14.16.2.13<ospfMaxAgeLsa>: Aged a LSA Area Id 0.0.0.0 LsdbType 2 LsdbLsid 192.168.3.1 LsdbRouterId 192.168.100.1 Router 192.168.100.1 .
+%Jan  1 05:43:08:379 2010 S1 IFNET/3/LINK_UPDOWN: Ethernet1/0/1 link status is DOWN.
+%Jan  1 05:43:08:480 2010 S1 IFNET/3/LINK_UPDOWN: Ethernet1/0/24 link status is DOWN.
+%Jan  1 05:43:08:580 2010 S1 IFNET/3/LINK_UPDOWN: Ethernet1/0/23 link status is DOWN.
+%Jan  1 05:43:08:681 2010 S1 IFNET/3/LINK_UPDOWN: Vlan-interface1 link status is DOWN.
+%Jan  1 05:43:08:791 2010 S1 IFNET/5/LINEPROTO_UPDOWN: Line protocol on the interface Vlan-interface1 is DOWN.
+%Jan  1 05:43:08:931 2010 S1 IFNET/3/LINK_UPDOWN: Vlan-interface3 link status is DOWN.
+%Jan  1 05:43:09:052 2010 S1 IFNET/5/LINEPROTO_UPDOWN: Line protocol on the interface Vlan-interface3 is DOWN.
+%Jan  1 05:43:09:195 2010 S1 IFNET/3/LINK_UPDOWN: Vlan-interface5 link status is DOWN.
+%Jan  1 05:43:09:305 2010 S1 IFNET/5/LINEPROTO_UPDOWN: Line protocol on the interface Vlan-interface5 is DOWN.
+%Jan  1 05:43:09:446 2010 S1 IFNET/3/LINK_UPDOWN: Vlan-interface100 link status is DOWN.
+%Jan  1 05:43:09:556 2010 S1 IFNET/5/LINEPROTO_UPDOWN: Line protocol on the interface Vlan-interface100 is DOWN.
+%Jan  1 05:43:09:697 2010 S1 PIM/5/PIM_NBR_DOWN: (public net): PIM-NBR change: Neighbor 192.168.3.2(Vlan-interface5) is down. (P06440)
+%Jan  1 05:43:09:868 2010 S1 OSPF/5/OSPF_NBR_CHG: OSPF 1 Neighbor 192.168.3.2(Vlan-interface5) from Full to Down.
+%Jan  1 05:43:10:008 2010 S1 PIM/5/PIM_NBR_DOWN: (public net): PIM-NBR change: Neighbor 192.168.100.4(Vlan-interface100) is down. (P06440)
+%Jan  1 05:43:10:179 2010 S1 OSPF/5/OSPF_NBR_CHG: OSPF 1 Neighbor 192.168.100.4(Vlan-interface100) from Full to Down.
+#Jan  1 05:43:10:320 2010 S1 OSPF/5/MAXAGE_LSA: OSPF TrapID1.3.6.1.2.1.14.16.2.13<ospfMaxAgeLsa>: Aged a LSA Area Id 0.0.0.0 LsdbType 1 LsdbLsid 192.168.100.1 LsdbRouterId 192.168.100.1 Router 192.168.100.1 .
+#Jan  1 05:43:10:580 2010 S1 OSPF/5/MAXAGE_LSA: OSPF TrapID1.3.6.1.2.1.14.16.2.13<ospfMaxAgeLsa>: Aged a LSA Area Id 0.0.0.0 LsdbType 2 LsdbLsid 192.168.3.1 LsdbRouterId 192.168.100.1 Router 192.168.100.1 .
+#Jan  1 05:43:10:851 2010 S1 TPMB/4/RT_TABLE_DEFAULT_RTDEL: 
+ 1.3.6.1.4.1.25506.2.38.1.3.5.3<hh3cDefaultRtDelTrap>: Default Rt Changed or Deleted. RtProType is 5, RtNextHopType is 1, RtNextHop is 192.168.100.4, RtOutIf is 96075875.
+%Jan  1 05:44:36:190 2010 S1 LLDP/5/LLDP_NEIGHBOR_AGE_OUT: Neighbor aged out on Port Ethernet1/0/24 (IfIndex 9371671), Chassis ID is 3c8c-402b-2c1c, Port ID is Ethernet1/0/6.
+%Jan  1 05:44:42:191 2010 S1 LLDP/5/LLDP_NEIGHBOR_AGE_OUT: Neighbor aged out on Port Ethernet1/0/1 (IfIndex 9371648), Chassis ID is 3c8c-402b-2c1c, Port ID is Ethernet1/0/1.
+%Jan  1 05:45:04:191 2010 S1 LLDP/5/LLDP_NEIGHBOR_AGE_OUT: Neighbor aged out on Port Ethernet1/0/23 (IfIndex 9371670), Chassis ID is 3c8c-402b-2c1c, Port ID is Ethernet1/0/5.
+#Jan  1 05:45:23:314 2010 S1 IFNET/4/INTERFACE UPDOWN: 
+ Trap 1.3.6.1.6.3.1.1.5.4<linkUp>: Interface 9371648 is Up, ifAdminStatus is 1, ifOperStatus is 1  
+#Jan  1 05:45:23:504 2010 S1 IFNET/4/INTERFACE UPDOWN: 
+ Trap 1.3.6.1.6.3.1.1.5.4<linkUp>: Interface 96075776 is Up, ifAdminStatus is 1, ifOperStatus is 1  
+#Jan  1 05:45:23:695 2010 S1 IFNET/4/INTERFACE UPDOWN: 
+ Trap 1.3.6.1.6.3.1.1.5.4<linkUp>: Interface 96075778 is Up, ifAdminStatus is 1, ifOperStatus is 1  
+#Jan  1 05:45:23:885 2010 S1 IFNET/4/INTERFACE UPDOWN: 
+ Trap 1.3.6.1.6.3.1.1.5.4<linkUp>: Interface 96075780 is Up, ifAdminStatus is 1, ifOperStatus is 1  
+#Jan  1 05:45:24:076 2010 S1 OSPF/6/ORIGINATE_LSA: OSPF TrapID1.3.6.1.2.1.14.16.2.12<ospfOriginateLsa>: Originate new LSA AreaId 0.0.0.0 LsdbType 1 LsdbLsid 192.168.100.1 LsdbRouterId 192.168.100.1 Router 192.168.100.1.
+%Jan  1 05:45:24:347 2010 S1 IFNET/3/LINK_UPDOWN: Ethernet1/0/1 link status is UP.
+%Jan  1 05:45:24:447 2010 S1 IFNET/3/LINK_UPDOWN: Vlan-interface1 link status is UP.
+%Jan  1 05:45:24:558 2010 S1 IFNET/5/LINEPROTO_UPDOWN: Line protocol on the interface Vlan-interface1 is UP.
+%Jan  1 05:45:24:688 2010 S1 IFNET/3/LINK_UPDOWN: Vlan-interface3 link status is UP.
+%Jan  1 05:45:24:788 2010 S1 IFNET/5/LINEPROTO_UPDOWN: Line protocol on the interface Vlan-interface3 is UP.
+%Jan  1 05:45:24:919 2010 S1 IFNET/3/LINK_UPDOWN: Vlan-interface5 link status is UP.
+%Jan  1 05:45:25:019 2010 S1 IFNET/5/LINEPROTO_UPDOWN: Line protocol on the interface Vlan-interface5 is UP.
+%Jan  1 05:45:25:150 2010 S1 LLDP/6/LLDP_CREATE_NEIGHBOR: New neighbor created on Port Ethernet1/0/1 (IfIndex 9371648), Chassis ID is 3c8c-402b-2c1c, Port ID is Ethernet1/0/1.
+#Jan  1 05:45:27:879 2010 S1 IFNET/4/INTERFACE UPDOWN: 
+ Trap 1.3.6.1.6.3.1.1.5.4<linkUp>: Interface 9371670 is Up, ifAdminStatus is 1, ifOperStatus is 1  
+#Jan  1 05:45:28:069 2010 S1 IFNET/4/INTERFACE UPDOWN: 
+ Trap 1.3.6.1.6.3.1.1.5.4<linkUp>: Interface 96075875 is Up, ifAdminStatus is 1, ifOperStatus is 1  
+%Jan  1 05:45:28:260 2010 S1 IFNET/3/LINK_UPDOWN: Ethernet1/0/23 link status is UP.
+%Jan  1 05:45:28:399 2010 S1 IFNET/3/LINK_UPDOWN: Vlan-interface100 link status is UP.
+%Jan  1 05:45:28:509 2010 S1 IFNET/5/LINEPROTO_UPDOWN: Line protocol on the interface Vlan-interface100 is UP.
+%Jan  1 05:45:28:660 2010 S1 IFNET/3/LINK_UPDOWN: Ethernet1/0/24 link status is UP.
+%Jan  1 05:45:28:760 2010 S1 LLDP/6/LLDP_CREATE_NEIGHBOR: New neighbor created on Port Ethernet1/0/23 (IfIndex 9371670), Chassis ID is 3c8c-402b-2c1c, Port ID is Ethernet1/0/5.
+%Jan  1 05:45:28:981 2010 S1 LLDP/6/LLDP_CREATE_NEIGHBOR: New neighbor created on Port Ethernet1/0/24 (IfIndex 9371671), Chassis ID is 3c8c-402b-2c1c, Port ID is Ethernet1/0/6.
+#Jan  1 05:45:29:201 2010 S1 IFNET/4/INTERFACE UPDOWN: 
+ Trap 1.3.6.1.6.3.1.1.5.4<linkUp>: Interface 9371671 is Up, ifAdminStatus is 1, ifOperStatus is 1  
+%Jan  1 05:45:29:861 2010 S1 PIM/5/PIM_NBR_UP: (public net): PIM-NBR change: Neighbor 192.168.100.4(Vlan-interface100) is up. (P061859)
+#Jan  1 05:45:30:118 2010 S1 OSPF/6/ORIGINATE_LSA: OSPF TrapID1.3.6.1.2.1.14.16.2.12<ospfOriginateLsa>: Originate new LSA AreaId 0.0.0.0 LsdbType 1 LsdbLsid 192.168.100.1 LsdbRouterId 192.168.100.1 Router 192.168.100.1.
+%Jan  1 05:45:52:014 2010 S1 PIM/5/PIM_NBR_UP: (public net): PIM-NBR change: Neighbor 192.168.3.2(Vlan-interface5) is up. (P061859)
+#Jan  1 05:46:03:204 2010 S1 OSPF/6/ORIGINATE_LSA: OSPF TrapID1.3.6.1.2.1.14.16.2.12<ospfOriginateLsa>: Originate new LSA AreaId 0.0.0.0 LsdbType 1 LsdbLsid 192.168.100.1 LsdbRouterId 192.168.100.1 Router 192.168.100.1.
+#Jan  1 05:46:03:474 2010 S1 OSPF/6/ORIGINATE_LSA: OSPF TrapID1.3.6.1.2.1.14.16.2.12<ospfOriginateLsa>: Originate new LSA AreaId 0.0.0.0 LsdbType 2 LsdbLsid 192.168.3.1 LsdbRouterId 192.168.100.1 Router 192.168.100.1.
+#Jan  1 05:46:04:118 2010 S1 OSPF/5/MAXAGE_LSA: OSPF TrapID1.3.6.1.2.1.14.16.2.13<ospfMaxAgeLsa>: Aged a LSA Area Id 0.0.0.0 LsdbType 2 LsdbLsid 192.168.3.1 LsdbRouterId 192.168.100.1 Router 192.168.100.1 .
+[S1-Ethernet1/0/1]
+[S1-Ethernet1/0/1]
+[S1-Ethernet1/0/1]
+[S1-Ethernet1/0/1]
+#Jan  1 05:46:06:118 2010 S1 OSPF/5/MAXAGE_LSA: OSPF TrapID1.3.6.1.2.1.14.16.2.13<ospfMaxAgeLsa>: Aged a LSA Area Id 0.0.0.0 LsdbType 2 LsdbLsid 192.168.3.1 LsdbRouterId 192.168.100.1 Router 192.168.100.1 .
+#Jan  1 05:46:10:118 2010 S1 OSPF/6/ORIGINATE_LSA: OSPF TrapID1.3.6.1.2.1.14.16.2.12<ospfOriginateLsa>: Originate new LSA AreaId 0.0.0.0 LsdbType 1 LsdbLsid 192.168.100.1 LsdbRouterId 192.168.100.1 Router 192.168.100.1.
+#Jan  1 05:46:12:194 2010 S1 OSPF/6/ORIGINATE_LSA: OSPF TrapID1.3.6.1.2.1.14.16.2.12<ospfOriginateLsa>: Originate new LSA AreaId 0.0.0.0 LsdbType 1 LsdbLsid 192.168.100.1 LsdbRouterId 192.168.100.1 Router 192.168.100.1.
+#Jan  1 05:46:12:465 2010 S1 OSPF/6/ORIGINATE_LSA: OSPF TrapID1.3.6.1.2.1.14.16.2.12<ospfOriginateLsa>: Originate new LSA AreaId 0.0.0.0 LsdbType 1 LsdbLsid 192.168.100.1 LsdbRouterId 192.168.100.1 Router 192.168.100.1.
+#Jan  1 05:46:12:736 2010 S1 OSPF/6/ORIGINATE_LSA: OSPF TrapID1.3.6.1.2.1.14.16.2.12<ospfOriginateLsa>: Originate new LSA AreaId 0.0.0.0 LsdbType 1 LsdbLsid 192.168.100.1 LsdbRouterId 192.168.100.1 Router 192.168.100.1.
+#Jan  1 05:46:13:006 2010 S1 OSPF/6/ORIGINATE_LSA: OSPF TrapID1.3.6.1.2.1.14.16.2.12<ospfOriginateLsa>: Originate new LSA AreaId 0.0.0.0 LsdbType 2 LsdbLsid 192.168.3.1 LsdbRouterId 192.168.100.1 Router 192.168.100.1.
+%Jan  1 05:46:13:277 2010 S1 OSPF/5/OSPF_NBR_CHG: OSPF 1 Neighbor 192.168.3.2(Vlan-interface5) from Loading to Full.
+#Jan  1 05:46:15:794 2010 S1 OSPF/6/ORIGINATE_LSA: OSPF TrapID1.3.6.1.2.1.14.16.2.12<ospfOriginateLsa>: Originate new LSA AreaId 0.0.0.0 LsdbType 2 LsdbLsid 192.168.3.1 LsdbRouterId 192.168.100.1 Router 192.168.100.1.
+#Jan  1 05:46:16:075 2010 S1 OSPF/6/ORIGINATE_LSA: OSPF TrapID1.3.6.1.2.1.14.16.2.12<ospfOriginateLsa>: Originate new LSA AreaId 0.0.0.0 LsdbType 2 LsdbLsid 192.168.3.1 LsdbRouterId 192.168.100.1 Router 192.168.100.1.
+%Jan  1 05:46:16:345 2010 S1 OSPF/5/OSPF_NBR_CHG: OSPF 1 Neighbor 192.168.100.4(Vlan-interface100) from Loading to Full.
+#Jan  1 05:46:18:118 2010 S1 OSPF/6/ORIGINATE_LSA: OSPF TrapID1.3.6.1.2.1.14.16.2.12<ospfOriginateLsa>: Originate new LSA AreaId 0.0.0.0 LsdbType 1 LsdbLsid 192.168.100.1 LsdbRouterId 192.168.100.1 Router 192.168.100.1.
+[S1-Ethernet1/0/1]
+[S1-Ethernet1/0/1]
+[S1-Ethernet1/0/1]
+[S1-Ethernet1/0/1]
+[S1-Ethernet1/0/1]
+[S1-Ethernet1/0/1]quit
+[S1]  
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]dis cur
+#
+ version 5.20, Release 2108P01
+#
+ sysname S1
+#
+ irf mac-address persistent timer
+ irf auto-update enable
+ undo irf link-delay
+#
+ domain default enable system
+#
+ ip ttl-expires enable
+ ip unreachables enable
+#
+ undo ip http enable
+#
+ multicast routing-enable
+#
+ password-recovery enable
+#
+vlan 1
+#
+vlan 3
+#               
+vlan 5          
+#               
+vlan 30         
+#               
+vlan 100        
+#               
+domain system   
+ access-limit disable
+ state active   
+ idle-cut disable
+ self-service-url disable
+#               
+user-group system
+ group-attribute allow-guest
+#               
+interface NULL0 
+#               
+interface Vlan-interface1
+#               
+interface Vlan-interface3
+#               
+interface Vlan-interface5
+ ip address 192.168.3.1 255.255.255.0
+ pim dm         
+#               
+interface Vlan-interface100
+ ip address 192.168.100.1 255.255.255.0
+ pim dm         
+#               
+interface Ethernet1/0/1
+ port link-mode bridge
+ port link-type trunk
+ port trunk permit vlan 1 3 to 5
+#               
+interface Ethernet1/0/2
+ port link-mode bridge
+#               
+interface Ethernet1/0/3
+ port link-mode bridge
+#               
+interface Ethernet1/0/4
+ port link-mode bridge
+#               
+interface Ethernet1/0/5
+ port link-mode bridge
+#               
+interface Ethernet1/0/6
+ port link-mode bridge
+#               
+interface Ethernet1/0/7
+ port link-mode bridge
+#               
+interface Ethernet1/0/8
+ port link-mode bridge
+#               
+interface Ethernet1/0/9
+ port link-mode bridge
+#               
+interface Ethernet1/0/10
+ port link-mode bridge
+#               
+interface Ethernet1/0/11
+ port link-mode bridge
+#               
+interface Ethernet1/0/12
+ port link-mode bridge
+#               
+interface Ethernet1/0/13
+ port link-mode bridge
+#               
+interface Ethernet1/0/14
+ port link-mode bridge
+#               
+interface Ethernet1/0/15
+ port link-mode bridge
+#               
+interface Ethernet1/0/16
+ port link-mode bridge
+#               
+interface Ethernet1/0/17
+ port link-mode bridge
+#               
+interface Ethernet1/0/18
+ port link-mode bridge
+#               
+interface Ethernet1/0/19
+ port link-mode bridge
+#               
+interface Ethernet1/0/20
+ port link-mode bridge
+#               
+interface Ethernet1/0/21
+ port link-mode bridge
+#               
+interface Ethernet1/0/22
+ port link-mode bridge
+#               
+interface Ethernet1/0/23
+ port link-mode bridge
+ port access vlan 100
+#               
+interface Ethernet1/0/24
+ port link-mode bridge
+ port access vlan 100
+#               
+interface GigabitEthernet1/0/25
+ port link-mode bridge
+#               
+interface GigabitEthernet1/0/26
+ port link-mode bridge
+#               
+interface GigabitEthernet1/0/27
+ port link-mode bridge
+#               
+interface GigabitEthernet1/0/28
+ port link-mode bridge
+#               
+ospf 1          
+ area 0.0.0.0   
+  network 192.168.100.0 0.0.0.255
+  network 192.168.3.0 0.0.0.255
+#
+ ip route-static 0.0.0.0 0.0.0.0 192.168.100.2
+ ip route-static 0.0.0.0 0.0.0.0 192.168.100.3 preference 80
+ ip route-static 0.0.0.0 0.0.0.0 192.168.100.4 preference 100
+#               
+ snmp-agent     
+ snmp-agent local-engineid 800063A2033C8C402A76CD
+ snmp-agent community write p
+ snmp-agent community read public
+ snmp-agent community write private
+ snmp-agent sys-info version all
+ snmp-agent target-host trap address udp-domain 10.3.1.2 params securityname public
+ snmp-agent trap enable default-route
+#               
+ load xml-configuration
+#               
+ load tr069-configuration
+#               
+user-interface aux 0
+user-interface vty 0 15
+#               
+return         
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
+[S1]
