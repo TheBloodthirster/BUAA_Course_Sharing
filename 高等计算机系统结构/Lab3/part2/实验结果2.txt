@@ -1,0 +1,404 @@
+[ZY1906408@cu07 utility-bins]$ ./smips -b ../simulator/procs/ControlHazardOnly/pcMsg_epoch.bsv -c all --run
+
+Building /home/ZY1906408/Lab3/simulator/procs/ControlHazardOnly/pcMsg_epoch.bsv
+
+Compiling /home/ZY1906408/Lab3/programs/src/qsort
+Running qsort on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+Cycles = 23531
+Insts  = 21628
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/median
+Running median on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+Cycles = 8133
+Insts  = 6873
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/vvadd
+Running vvadd on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+Cycles = 3325
+Insts  = 3020
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/towers
+Running towers on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+Cycles = 10993
+Insts  = 9909
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/print
+Running print on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+chello world
+dhello world
+25
+Cycles = 471
+Insts  = 369
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv1_addiu.S
+Running assembly/smipsv1_addiu.S on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv1_bne.S
+Running assembly/smipsv1_bne.S on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 74452 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv1_lw.S
+Running assembly/smipsv1_lw.S on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 74452 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv1_simple.S
+Running assembly/smipsv1_simple.S on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv1_sw.S
+Running assembly/smipsv1_sw.S on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 75166 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_addiu.S
+Running assembly/smipsv2_addiu.S on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_addu.S
+Running assembly/smipsv2_addu.S on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_andi.S
+Running assembly/smipsv2_andi.S on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_and.S
+Running assembly/smipsv2_and.S on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_beq.S
+Running assembly/smipsv2_beq.S on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_bgez.S
+Running assembly/smipsv2_bgez.S on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_bgtz.S
+Running assembly/smipsv2_bgtz.S on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_blez.S
+Running assembly/smipsv2_blez.S on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_bltz.S
+Running assembly/smipsv2_bltz.S on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_bne.S
+Running assembly/smipsv2_bne.S on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_jalr.S
+Running assembly/smipsv2_jalr.S on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_jal.S
+Running assembly/smipsv2_jal.S on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_jr.S
+Running assembly/smipsv2_jr.S on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_j.S
+Running assembly/smipsv2_j.S on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_lui.S
+Running assembly/smipsv2_lui.S on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_lw.S
+Running assembly/smipsv2_lw.S on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_nor.S
+Running assembly/smipsv2_nor.S on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_ori.S
+Running assembly/smipsv2_ori.S on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_or.S
+Running assembly/smipsv2_or.S on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_simple.S
+Running assembly/smipsv2_simple.S on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_sll.S
+Running assembly/smipsv2_sll.S on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_sllv.S
+Running assembly/smipsv2_sllv.S on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_slti.S
+Running assembly/smipsv2_slti.S on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_sltiu.S
+Running assembly/smipsv2_sltiu.S on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_slt.S
+Running assembly/smipsv2_slt.S on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_sltu.S
+Running assembly/smipsv2_sltu.S on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_sra.S
+Running assembly/smipsv2_sra.S on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_srav.S
+Running assembly/smipsv2_srav.S on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_srl.S
+Running assembly/smipsv2_srl.S on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_srlv.S
+Running assembly/smipsv2_srlv.S on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_subu.S
+Running assembly/smipsv2_subu.S on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 82029 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_sw.S
+Running assembly/smipsv2_sw.S on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_xori.S
+Running assembly/smipsv2_xori.S on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_xor.S
+Running assembly/smipsv2_xor.S on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/multiply
+Running multiply on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+Cycles = 27219
+Insts  = 21100
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/filters
+Running filters on ControlHazardOnly/pcMsg_epoch.bsv
+pkill: killing pid 13745 failed: Operation not permitted
+pkill: killing pid 29022 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+called sharpen
+exiting sharpen
+called sharpen
+exiting sharpen
+called sharpen
+exiting sharpen
+called sharpen
+exiting sharpen
+called sharpen
+exiting sharpen
+called sharpen
+exiting sharpen
+Cycles = 1128184
+Insts  = 867331
+PASSED
+SceMi Service thread finished!

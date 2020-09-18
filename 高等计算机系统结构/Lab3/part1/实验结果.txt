@@ -1,0 +1,446 @@
+[ZY1906408@cu07 utility-bins]$ ./smips -b ../simulator/procs/Unpipelined/2cyc_harvard.bsv -c all --run
+
+Building /home/ZY1906408/Lab3/simulator/procs/Unpipelined/2cyc_harvard.bsv
+
+Compiling /home/ZY1906408/Lab3/programs/src/qsort
+Running qsort on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 89517 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+Cycles = 60130
+Insts  = 21628
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/median
+Running median on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 89845 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+Cycles = 18422
+Insts  = 6873
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/vvadd
+Running vvadd on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 90469 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+Cycles = 8454
+Insts  = 3020
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/towers
+Running towers on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 90829 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+Cycles = 26360
+Insts  = 9909
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/print
+Running print on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 91161 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+chello world
+dhello world
+25
+Cycles = 964
+Insts  = 369
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv1_addiu.S
+Running assembly/smipsv1_addiu.S on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 91522 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv1_bne.S
+Running assembly/smipsv1_bne.S on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 91883 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv1_lw.S
+Running assembly/smipsv1_lw.S on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 92241 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv1_simple.S
+Running assembly/smipsv1_simple.S on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 92602 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv1_sw.S
+Running assembly/smipsv1_sw.S on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 92974 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_addiu.S
+Running assembly/smipsv2_addiu.S on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 93349 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_addu.S
+Running assembly/smipsv2_addu.S on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 93708 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_andi.S
+Running assembly/smipsv2_andi.S on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 94068 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_and.S
+Running assembly/smipsv2_and.S on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 94439 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_beq.S
+Running assembly/smipsv2_beq.S on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 94798 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_bgez.S
+Running assembly/smipsv2_bgez.S on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 95164 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_bgtz.S
+Running assembly/smipsv2_bgtz.S on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 95528 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_blez.S
+Running assembly/smipsv2_blez.S on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 95528 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_bltz.S
+Running assembly/smipsv2_bltz.S on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 96061 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_bne.S
+Running assembly/smipsv2_bne.S on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 96061 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_jalr.S
+Running assembly/smipsv2_jalr.S on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 96061 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_jal.S
+Running assembly/smipsv2_jal.S on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 96061 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_jr.S
+Running assembly/smipsv2_jr.S on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 96061 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_j.S
+Running assembly/smipsv2_j.S on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 96061 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_lui.S
+Running assembly/smipsv2_lui.S on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 96061 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_lw.S
+Running assembly/smipsv2_lw.S on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 96061 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_nor.S
+Running assembly/smipsv2_nor.S on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 96061 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_ori.S
+Running assembly/smipsv2_ori.S on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 96061 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_or.S
+Running assembly/smipsv2_or.S on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 96061 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_simple.S
+Running assembly/smipsv2_simple.S on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 96061 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_sll.S
+Running assembly/smipsv2_sll.S on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 96061 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_sllv.S
+Running assembly/smipsv2_sllv.S on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 96061 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_slti.S
+Running assembly/smipsv2_slti.S on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 96061 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_sltiu.S
+Running assembly/smipsv2_sltiu.S on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 96061 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_slt.S
+Running assembly/smipsv2_slt.S on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 96061 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_sltu.S
+Running assembly/smipsv2_sltu.S on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 96061 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_sra.S
+Running assembly/smipsv2_sra.S on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 96061 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_srav.S
+Running assembly/smipsv2_srav.S on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 96061 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_srl.S
+Running assembly/smipsv2_srl.S on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 96061 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_srlv.S
+Running assembly/smipsv2_srlv.S on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 96061 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_subu.S
+Running assembly/smipsv2_subu.S on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 96061 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_sw.S
+Running assembly/smipsv2_sw.S on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 96061 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_xori.S
+Running assembly/smipsv2_xori.S on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 96061 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/assembly/smipsv2_xor.S
+Running assembly/smipsv2_xor.S on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 96061 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/multiply
+Running multiply on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 96061 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+Cycles = 56596
+Insts  = 21100
+PASSED
+SceMi Service thread finished!
+
+Compiling /home/ZY1906408/Lab3/programs/src/filters
+Running filters on Unpipelined/2cyc_harvard.bsv
+pkill: killing pid 40791 failed: Operation not permitted
+pkill: killing pid 96061 failed: Operation not permitted
+pkill: killing pid 96784 failed: Operation not permitted
+pkill: killing pid 132700 failed: Operation not permitted
+called sharpen
+exiting sharpen
+called sharpen
+exiting sharpen
+called sharpen
+exiting sharpen
+called sharpen
+exiting sharpen
+called sharpen
+exiting sharpen
+called sharpen
+exiting sharpen
+Cycles = 2322527
+Insts  = 867331
+PASSED
+SceMi Service thread finished!

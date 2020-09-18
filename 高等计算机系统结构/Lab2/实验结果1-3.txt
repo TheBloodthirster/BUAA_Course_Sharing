@@ -1,0 +1,81 @@
+Compile Link and Simulate the Project...
++ bsc -u -sim -simdir . -bdir . -info-dir . -keep-fires -p %/Prelude:%/Libraries:%/Libraries/BlueNoC -g mkTests TestShifterPipe.bsv
+checking package dependencies
+compiling TestShifterPipe.bsv
+code generation for mkTests starts
+Elaborated module file created: mkTests.ba
++ bsc -e mkTests -sim -o ./out -simdir . -p %/Prelude:%/Libraries:%/Libraries/BlueNoC -bdir . -keep-fires
+All packages are up to date.
+Bluesim object created: ./mkTests.{h,o}
+Bluesim object created: ./model_mkTests.{h,o}
++ ./out
+Simulation shared library created: out.so
+Simulation executable created: ./out
+correct!
+correct!
+correct!
+correct!
+correct!
+correct!
+correct!
+correct!
+correct!
+correct!
+Compile/Link/Simulate finished
+
+
+
+
+Compile Link and Simulate the Project...
++ bsc -u -sim -simdir . -bdir . -info-dir . -keep-fires -p %/Prelude:%/Libraries:%/Libraries/BlueNoC -g mkTests TestShifterPipe.bsv
+checking package dependencies
+compiling TestShifterPipe.bsv
+code generation for mkTests starts
+Elaborated module file created: mkTests.ba
++ bsc -e mkTests -sim -o ./out -simdir . -p %/Prelude:%/Libraries:%/Libraries/BlueNoC -bdir . -keep-fires
+All packages are up to date.
+Bluesim object created: ./mkTests.{h,o}
+Bluesim object created: ./model_mkTests.{h,o}
++ ./out
+Simulation shared library created: out.so
+Simulation executable created: ./out
+correct!
+correct!
+correct!
+correct!
+correct!
+correct!
+correct!
+correct!
+correct!
+correct!
+Compile/Link/Simulate finished
+
+
+
+
+
+Compile Link and Simulate the Project...
++ bsc -u -sim -simdir . -bdir . -info-dir . -keep-fires -p %/Prelude:%/Libraries:%/Libraries/BlueNoC -g mkTests TestShifterPipe.bsv
+checking package dependencies
+compiling TestShifterPipe.bsv
+code generation for mkTests starts
+Elaborated module file created: mkTests.ba
++ bsc -e mkTests -sim -o ./out -simdir . -p %/Prelude:%/Libraries:%/Libraries/BlueNoC -bdir . -keep-fires
+All packages are up to date.
+Bluesim object created: ./mkTests.{h,o}
+Bluesim object created: ./model_mkTests.{h,o}
++ ./out
+Simulation shared library created: out.so
+Simulation executable created: ./out
+correct!
+correct!
+correct!
+correct!
+correct!
+correct!
+correct!
+correct!
+correct!
+correct!
+Compile/Link/Simulate finished
