@@ -10,3 +10,5 @@
 
 课件与习题下载：
 http://www.xuwang.tech/course/sc2019fall/main.html
+
+作业部分最后一个作业未完成，作业老师按照工作量给，作业涉及代码这里就不放出了，本课程适合Java方向同学，参考分数95
