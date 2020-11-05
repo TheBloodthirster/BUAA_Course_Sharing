@@ -6,5 +6,3 @@
 
 参考大作业参考项目地址：（免考）
 https://github.com/wang0618/simple_compiler
-
-都研究生阶段了，抄袭后果自负。
