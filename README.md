@@ -64,4 +64,4 @@ AnyShare://Iaoceot/资料统计
 3. 假如你有相关材料需要上传，请使用北航云盘或者直接把课件打包发送到邮箱   zy1906408@buaa.edu.cn
 
 # 致谢
-本项目由浙江大学课程攻略共享计划[https://github.com/QSCTech/zju-icicles] 启发，部分方式参考浙大项目构建。
+本项目由浙江大学课程攻略共享计划[https://github.com/QSCTech/zju-icicles]启发，部分方式参考浙大项目构建。
