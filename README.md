@@ -19,13 +19,11 @@
 
 项目北航云盘仓库：
 
-https://bhpan.buaa.edu.cn:443/link/DB38BD0FA4C4BE0726B82033ED578B85
+https://bhpan.buaa.edu.cn:443/link/FDA81FE11C6ADD51BF2F457F6308E04C
 
-有效期限：2025-10-16 23:59
+有效期限：2025-12-20 23:59
 
-访问密码：I3eV
-
-云盘仓库到期时间2025年10月
+访问密码：1GoU
 
 部分课件因为隐私问题只有云盘仓库有。
 
@@ -33,7 +31,7 @@ https://bhpan.buaa.edu.cn:443/link/DB38BD0FA4C4BE0726B82033ED578B85
 
 共享连接：
 
-AnyShare://Iaoceot/资料统计
+AnyShare://Iaoceot/课件资料共享
 
 共享连接使用方式：
 
