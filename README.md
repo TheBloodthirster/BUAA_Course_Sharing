@@ -61,14 +61,17 @@ AnyShare://Iaoceot/课件资料共享
 
 # 致谢
 
-感谢师弟or师妹为本仓库贡献材料:
+感谢以下师弟or师妹为本仓库贡献材料:
+
 DK：矩阵论/矩阵论20210107补充材料(赵迪老师a卷)
+
 慕弋云子：目前在维护数理统计的笔记内容[https://github.com/Muyiyunzi/ShuLiTongJi_BUAA]
+
 ChibisukeDragon：遥感地图与视频处理技术、经济学思想和中特参考书籍
+
 Vladimir-Chan:6系部分同学选的跨学科课，3系的智能自主系统，期末考试内容的回忆版
+
 rorschachandbat:添加了联邦党人文集的一般通识课
-
-
 
 本项目由浙江大学课程攻略共享计划 [https://github.com/QSCTech/zju-icicles] 启发，部分方式参考浙大项目构建。
 
