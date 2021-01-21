@@ -62,4 +62,8 @@ AnyShare://Iaoceot/课件资料共享
 3. 假如你有相关材料需要上传，请使用北航云盘或者直接把课件打包发送到邮箱   zy1906408@buaa.edu.cn
 
 # 致谢
+
+感谢师弟or师妹为本仓库贡献材料：DK、慕弋云子。
+
 本项目由浙江大学课程攻略共享计划 [https://github.com/QSCTech/zju-icicles] 启发，部分方式参考浙大项目构建。
+
