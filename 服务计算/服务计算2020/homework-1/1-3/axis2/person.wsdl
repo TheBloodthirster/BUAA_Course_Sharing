@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://axis2" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" targetNamespace="http://axis2">
+    <wsdl:documentation>MyService</wsdl:documentation>
+    <wsdl:types>
+        <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://axis2">
+            <xs:element name="setName">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="setGender">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="gender" type="xs:boolean"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="setAge">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="age" type="xs:int"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="sayHello">
+                <xs:complexType>
+                    <xs:sequence/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="sayHelloResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="isGender">
+                <xs:complexType>
+                    <xs:sequence/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="isGenderResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="return" type="xs:boolean"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getName">
+                <xs:complexType>
+                    <xs:sequence/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getNameResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getAge">
+                <xs:complexType>
+                    <xs:sequence/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getAgeResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="return" type="xs:int"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="setNameRequest">
+        <wsdl:part name="parameters" element="ns:setName"/>
+    </wsdl:message>
+    <wsdl:message name="setGenderRequest">
+        <wsdl:part name="parameters" element="ns:setGender"/>
+    </wsdl:message>
+    <wsdl:message name="getAgeRequest">
+        <wsdl:part name="parameters" element="ns:getAge"/>
+    </wsdl:message>
+    <wsdl:message name="getAgeResponse">
+        <wsdl:part name="parameters" element="ns:getAgeResponse"/>
+    </wsdl:message>
+    <wsdl:message name="sayHelloRequest">
+        <wsdl:part name="parameters" element="ns:sayHello"/>
+    </wsdl:message>
+    <wsdl:message name="sayHelloResponse">
+        <wsdl:part name="parameters" element="ns:sayHelloResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getNameRequest">
+        <wsdl:part name="parameters" element="ns:getName"/>
+    </wsdl:message>
+    <wsdl:message name="getNameResponse">
+        <wsdl:part name="parameters" element="ns:getNameResponse"/>
+    </wsdl:message>
+    <wsdl:message name="isGenderRequest">
+        <wsdl:part name="parameters" element="ns:isGender"/>
+    </wsdl:message>
+    <wsdl:message name="isGenderResponse">
+        <wsdl:part name="parameters" element="ns:isGenderResponse"/>
+    </wsdl:message>
+    <wsdl:message name="setAgeRequest">
+        <wsdl:part name="parameters" element="ns:setAge"/>
+    </wsdl:message>
+    <wsdl:portType name="MyServicePortType">
+        <wsdl:operation name="setName">
+            <wsdl:input message="ns:setNameRequest" wsaw:Action="urn:setName"/>
+        </wsdl:operation>
+        <wsdl:operation name="setGender">
+            <wsdl:input message="ns:setGenderRequest" wsaw:Action="urn:setGender"/>
+        </wsdl:operation>
+        <wsdl:operation name="getAge">
+            <wsdl:input message="ns:getAgeRequest" wsaw:Action="urn:getAge"/>
+            <wsdl:output message="ns:getAgeResponse" wsaw:Action="urn:getAgeResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="sayHello">
+            <wsdl:input message="ns:sayHelloRequest" wsaw:Action="urn:sayHello"/>
+            <wsdl:output message="ns:sayHelloResponse" wsaw:Action="urn:sayHelloResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getName">
+            <wsdl:input message="ns:getNameRequest" wsaw:Action="urn:getName"/>
+            <wsdl:output message="ns:getNameResponse" wsaw:Action="urn:getNameResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="isGender">
+            <wsdl:input message="ns:isGenderRequest" wsaw:Action="urn:isGender"/>
+            <wsdl:output message="ns:isGenderResponse" wsaw:Action="urn:isGenderResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="setAge">
+            <wsdl:input message="ns:setAgeRequest" wsaw:Action="urn:setAge"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="MyServiceSoap11Binding" type="ns:MyServicePortType">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="setName">
+            <soap:operation soapAction="urn:setName" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="setGender">
+            <soap:operation soapAction="urn:setGender" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="getAge">
+            <soap:operation soapAction="urn:getAge" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="sayHello">
+            <soap:operation soapAction="urn:sayHello" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getName">
+            <soap:operation soapAction="urn:getName" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="isGender">
+            <soap:operation soapAction="urn:isGender" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="setAge">
+            <soap:operation soapAction="urn:setAge" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="MyServiceSoap12Binding" type="ns:MyServicePortType">
+        <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="setName">
+            <soap12:operation soapAction="urn:setName" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="setGender">
+            <soap12:operation soapAction="urn:setGender" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="getAge">
+            <soap12:operation soapAction="urn:getAge" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="sayHello">
+            <soap12:operation soapAction="urn:sayHello" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getName">
+            <soap12:operation soapAction="urn:getName" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="isGender">
+            <soap12:operation soapAction="urn:isGender" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="setAge">
+            <soap12:operation soapAction="urn:setAge" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="MyServiceHttpBinding" type="ns:MyServicePortType">
+        <http:binding verb="POST"/>
+        <wsdl:operation name="setName">
+            <http:operation location="setName"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="setGender">
+            <http:operation location="setGender"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="getAge">
+            <http:operation location="getAge"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="sayHello">
+            <http:operation location="sayHello"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getName">
+            <http:operation location="getName"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="isGender">
+            <http:operation location="isGender"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="setAge">
+            <http:operation location="setAge"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="MyService">
+        <wsdl:port name="MyServiceHttpSoap11Endpoint" binding="ns:MyServiceSoap11Binding">
+            <soap:address location="http://127.0.0.1:8080/axis2/services/MyService.MyServiceHttpSoap11Endpoint/"/>
+        </wsdl:port>
+        <wsdl:port name="MyServiceHttpSoap12Endpoint" binding="ns:MyServiceSoap12Binding">
+            <soap12:address location="http://127.0.0.1:8080/axis2/services/MyService.MyServiceHttpSoap12Endpoint/"/>
+        </wsdl:port>
+        <wsdl:port name="MyServiceHttpEndpoint" binding="ns:MyServiceHttpBinding">
+            <http:address location="http://127.0.0.1:8080/axis2/services/MyService.MyServiceHttpEndpoint/"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

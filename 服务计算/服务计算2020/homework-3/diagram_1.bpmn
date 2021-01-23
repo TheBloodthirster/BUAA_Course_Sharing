@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_1f1z7i6" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.4.0">
+  <bpmn:process id="TravellingSalesmanProblem" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>Flow_1kkbs99</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:serviceTask id="Activity_1h9be04" name="Get Map">
+      <bpmn:extensionElements>
+        <camunda:connector>
+          <camunda:inputOutput>
+            <camunda:inputParameter name="method">GET</camunda:inputParameter>
+            <camunda:inputParameter name="url">http://localhost:5000/map/${id}</camunda:inputParameter>
+            <camunda:outputParameter name="map">
+              <camunda:script scriptFormat="Javascript">connector.getVariable("response");</camunda:script>
+            </camunda:outputParameter>
+          </camunda:inputOutput>
+          <camunda:connectorId>http-connector</camunda:connectorId>
+        </camunda:connector>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0lyprue</bpmn:incoming>
+      <bpmn:outgoing>Flow_04u7931</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:endEvent id="Event_132vtgj">
+      <bpmn:incoming>Flow_1bk9djj</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_1bk9djj" sourceRef="Activity_0wx92tb" targetRef="Event_132vtgj" />
+    <bpmn:userTask id="Activity_0wx92tb" name="Show Result" camunda:assignee="demo">
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="result" label="Result" type="string" />
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0f19egl</bpmn:incoming>
+      <bpmn:outgoing>Flow_1bk9djj</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:serviceTask id="Activity_05iyygh" name="Upload Map">
+      <bpmn:extensionElements>
+        <camunda:connector>
+          <camunda:inputOutput>
+            <camunda:inputParameter name="payload">${map}</camunda:inputParameter>
+            <camunda:inputParameter name="url">http://localhost:10000/map</camunda:inputParameter>
+            <camunda:inputParameter name="method">POST</camunda:inputParameter>
+            <camunda:outputParameter name="result_id">
+              <camunda:script scriptFormat="Javascript">JSON.parse(connector.getVariable("response"))["id"];</camunda:script>
+            </camunda:outputParameter>
+          </camunda:inputOutput>
+          <camunda:connectorId>http-connector</camunda:connectorId>
+        </camunda:connector>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_04u7931</bpmn:incoming>
+      <bpmn:outgoing>Flow_1o2dmps</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="Activity_0wtpqj2" name="Get Result">
+      <bpmn:extensionElements>
+        <camunda:connector>
+          <camunda:inputOutput>
+            <camunda:inputParameter name="method">GET</camunda:inputParameter>
+            <camunda:inputParameter name="url">http://localhost:10000/result/${result_id}</camunda:inputParameter>
+            <camunda:outputParameter name="status_code">
+              <camunda:script scriptFormat="Javascript">connector.getVariable("statusCode");</camunda:script>
+            </camunda:outputParameter>
+            <camunda:outputParameter name="result">
+              <camunda:script scriptFormat="Javascript">connector.getVariable("response");</camunda:script>
+            </camunda:outputParameter>
+          </camunda:inputOutput>
+          <camunda:connectorId>http-connector</camunda:connectorId>
+        </camunda:connector>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1o2dmps</bpmn:incoming>
+      <bpmn:incoming>Flow_1loeilw</bpmn:incoming>
+      <bpmn:outgoing>Flow_14imvw9</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="Flow_04u7931" sourceRef="Activity_1h9be04" targetRef="Activity_05iyygh" />
+    <bpmn:sequenceFlow id="Flow_1o2dmps" sourceRef="Activity_05iyygh" targetRef="Activity_0wtpqj2" />
+    <bpmn:exclusiveGateway id="Gateway_0vn97xo" name="Result?">
+      <bpmn:incoming>Flow_14imvw9</bpmn:incoming>
+      <bpmn:outgoing>Flow_0f19egl</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1loeilw</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="Flow_0f19egl" name="Yes" sourceRef="Gateway_0vn97xo" targetRef="Activity_0wx92tb">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${status_code==200}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_14imvw9" sourceRef="Activity_0wtpqj2" targetRef="Gateway_0vn97xo" />
+    <bpmn:sequenceFlow id="Flow_1loeilw" name="No" sourceRef="Gateway_0vn97xo" targetRef="Activity_0wtpqj2">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${status_code!=200}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_1kkbs99" sourceRef="StartEvent_1" targetRef="Activity_0o8u809" />
+    <bpmn:endEvent id="Event_0f5tf1s">
+      <bpmn:incoming>Flow_0dbxi94</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:exclusiveGateway id="Gateway_1nlzwwr" name="is vaild?">
+      <bpmn:incoming>Flow_1r4mexp</bpmn:incoming>
+      <bpmn:outgoing>Flow_0lyprue</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0dbxi94</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="Flow_1r4mexp" sourceRef="Activity_0o8u809" targetRef="Gateway_1nlzwwr" />
+    <bpmn:sequenceFlow id="Flow_0lyprue" name="Yes" sourceRef="Gateway_1nlzwwr" targetRef="Activity_1h9be04">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${status_code&lt;400}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_0dbxi94" name="No" sourceRef="Gateway_1nlzwwr" targetRef="Event_0f5tf1s">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${status_code&gt;400}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:serviceTask id="Activity_0o8u809" name="Create Task">
+      <bpmn:extensionElements>
+        <camunda:connector>
+          <camunda:inputOutput>
+            <camunda:inputParameter name="url">http://localhost:5000/tasks</camunda:inputParameter>
+            <camunda:inputParameter name="payload">{"api_key":"${api_key}","map_size":${map_size}}</camunda:inputParameter>
+            <camunda:inputParameter name="method">POST</camunda:inputParameter>
+            <camunda:outputParameter name="status_code">
+              <camunda:script scriptFormat="Javascript">connector.getVariable("statusCode");</camunda:script>
+            </camunda:outputParameter>
+            <camunda:outputParameter name="id">
+              <camunda:script scriptFormat="Javascript">JSON.parse(connector.getVariable("response"))["map_size"];</camunda:script>
+            </camunda:outputParameter>
+          </camunda:inputOutput>
+          <camunda:connectorId>http-connector</camunda:connectorId>
+        </camunda:connector>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1kkbs99</bpmn:incoming>
+      <bpmn:outgoing>Flow_1r4mexp</bpmn:outgoing>
+    </bpmn:serviceTask>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="TravellingSalesmanProblem">
+      <bpmndi:BPMNEdge id="Flow_1bk9djj_di" bpmnElement="Flow_1bk9djj">
+        <di:waypoint x="710" y="370" />
+        <di:waypoint x="772" y="370" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_04u7931_di" bpmnElement="Flow_04u7931">
+        <di:waypoint x="660" y="250" />
+        <di:waypoint x="660" y="290" />
+        <di:waypoint x="260" y="290" />
+        <di:waypoint x="260" y="330" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1o2dmps_di" bpmnElement="Flow_1o2dmps">
+        <di:waypoint x="310" y="370" />
+        <di:waypoint x="360" y="370" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0f19egl_di" bpmnElement="Flow_0f19egl">
+        <di:waypoint x="545" y="370" />
+        <di:waypoint x="610" y="370" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="569" y="352" width="18" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_14imvw9_di" bpmnElement="Flow_14imvw9">
+        <di:waypoint x="460" y="370" />
+        <di:waypoint x="495" y="370" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1loeilw_di" bpmnElement="Flow_1loeilw">
+        <di:waypoint x="520" y="395" />
+        <di:waypoint x="520" y="450" />
+        <di:waypoint x="410" y="450" />
+        <di:waypoint x="410" y="410" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="458" y="432" width="15" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1kkbs99_di" bpmnElement="Flow_1kkbs99">
+        <di:waypoint x="188" y="210" />
+        <di:waypoint x="270" y="210" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1r4mexp_di" bpmnElement="Flow_1r4mexp">
+        <di:waypoint x="370" y="210" />
+        <di:waypoint x="455" y="210" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0lyprue_di" bpmnElement="Flow_0lyprue">
+        <di:waypoint x="505" y="210" />
+        <di:waypoint x="610" y="210" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="550" y="192" width="18" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0dbxi94_di" bpmnElement="Flow_0dbxi94">
+        <di:waypoint x="480" y="185" />
+        <di:waypoint x="480" y="118" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="488" y="149" width="15" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Activity_0arrphi_di" bpmnElement="Activity_0wx92tb">
+        <dc:Bounds x="610" y="330" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0ayv5m2_di" bpmnElement="Activity_0wtpqj2">
+        <dc:Bounds x="360" y="330" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1w19ioz_di" bpmnElement="Activity_05iyygh">
+        <dc:Bounds x="210" y="330" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0nue56n_di" bpmnElement="Activity_1h9be04">
+        <dc:Bounds x="610" y="170" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="152" y="192" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_132vtgj_di" bpmnElement="Event_132vtgj">
+        <dc:Bounds x="772" y="352" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="768" y="395" width="51" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1nlzwwr_di" bpmnElement="Gateway_1nlzwwr" isMarkerVisible="true">
+        <dc:Bounds x="455" y="185" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="460" y="242" width="40" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0f5tf1s_di" bpmnElement="Event_0f5tf1s">
+        <dc:Bounds x="462" y="82" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0oph3xp_di" bpmnElement="Activity_0o8u809">
+        <dc:Bounds x="270" y="170" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0vn97xo_di" bpmnElement="Gateway_0vn97xo" isMarkerVisible="true">
+        <dc:Bounds x="495" y="345" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="506" y="315" width="38" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
