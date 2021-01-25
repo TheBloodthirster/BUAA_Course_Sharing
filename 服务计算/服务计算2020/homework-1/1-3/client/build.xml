@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?><project basedir="." default="jar.client">
+    <!--Auto generated ant build file-->
+    <property environment="env"/>
+    <property name="axis2.home" value="${env.AXIS2_HOME}"/>
+    <property name="project.base.dir" value="."/>
+    <property name="maven.class.path" value=""/>
+    <property name="name" value="MyService"/>
+    <property name="src" value="${project.base.dir}/src"/>
+    <property name="test" value="${project.base.dir}/test"/>
+    <property name="build" value="${project.base.dir}/build"/>
+    <property name="classes" value="${build}/classes"/>
+    <property name="lib" value="${build}/lib"/>
+    <property name="resources" value="${project.base.dir}/resources"/>
+    <property name="jars.ok" value=""/>
+    <path id="axis2.class.path">
+        <pathelement path="${java.class.path}"/>
+        <pathelement path="${maven.class.path}"/>
+        <fileset dir="${axis2.home}">
+            <include name="lib/*.jar"/>
+        </fileset>
+    </path>
+    <target name="init">
+        <mkdir dir="${build}"/>
+        <mkdir dir="${classes}"/>
+        <mkdir dir="${lib}"/>
+    </target>
+    <target name="pre.compile.test" depends="init">
+        <!--Test the classpath for the availability of necesary classes-->
+        <available classname="javax.xml.stream.XMLStreamReader" property="stax.available" classpathref="axis2.class.path"/>
+        <available classname="org.apache.axis2.engine.AxisEngine" property="axis2.available" classpathref="axis2.class.path"/>
+        <condition property="jars.ok">
+            <and>
+                <isset property="stax.available"/>
+                <isset property="axis2.available"/>
+            </and>
+        </condition>
+        <!--Print out the availabilities-->
+        <echo message="Stax Availability= ${stax.available}"/>
+        <echo message="Axis2 Availability= ${axis2.available}"/>
+    </target>
+    <target name="compile.src" depends="pre.compile.test" if="jars.ok">
+        <javac fork="true" memoryInitialSize="256m" memoryMaximumSize="256m" debug="on" destdir="${classes}" srcdir="${src}">
+            <classpath refid="axis2.class.path"/>
+        </javac>
+    </target>
+    <target name="compile.test" depends="compile.src" if="jars.ok">
+        <javac fork="true" memoryInitialSize="256m" memoryMaximumSize="256m" debug="on" destdir="${classes}">
+            <src path="${test}"/>
+            <classpath refid="axis2.class.path"/>
+        </javac>
+    </target>
+    <target name="echo.classpath.problem" depends="pre.compile.test" unless="jars.ok">
+        <echo message="The class path is not set right!                                Please make sure the following classes are in the classpath                                1. XmlBeans                                2. Stax                                3. Axis2                 "/>
+    </target>
+    <target name="jar.all" depends="jar.server, jar.client"/>
+    <target name="jar.server" depends="compile.src,echo.classpath.problem" if="jars.ok">
+        <copy toDir="${classes}/META-INF" failonerror="false">
+            <fileset dir="${resources}">
+                <include name="*.xml"/>
+                <include name="*.wsdl"/>
+                <include name="*.xsd"/>
+            </fileset>
+        </copy>
+        <jar destfile="${lib}/${name}.aar">
+            <fileset excludes="**/Test.class" dir="${classes}"/>
+        </jar>
+    </target>
+    <target name="jar.client" if="jars.ok" depends="compile.src">
+        <jar destfile="${lib}/${name}-test-client.jar">
+            <fileset dir="${classes}">
+                <exclude name="**/META-INF/*.*"/>
+                <exclude name="**/lib/*.*"/>
+                <exclude name="**/*MessageReceiver.class"/>
+                <exclude name="**/*Skeleton.class"/>
+            </fileset>
+        </jar>
+    </target>
+    <target name="make.repo" depends="jar.server" if="jars.ok">
+        <mkdir dir="${build}/repo/"/>
+        <mkdir dir="${build}/repo/services"/>
+        <copy file="${build}/lib/${name}.aar" toDir="${build}/repo/services/"/>
+    </target>
+    <target name="start.server" depends="make.repo" if="jars.ok">
+        <java classname="org.apache.axis2.transport.http.SimpleHTTPServer" fork="true">
+            <arg value="${build}/repo"/>
+            <classpath refid="axis2.class.path"/>
+        </java>
+    </target>
+    <target name="run.test" depends="compile.test" if="jars.ok">
+        <path id="test.class.path">
+            <pathelement location="${lib}/${name}-test-client.jar"/>
+            <path refid="axis2.class.path"/>
+            <pathelement location="${classes}"/>
+        </path>
+        <mkdir dir="${build}/test-reports/"/>
+        <junit printsummary="yes" haltonfailure="yes">
+            <classpath refid="test.class.path"/>
+            <formatter type="plain"/>
+            <batchtest fork="yes" toDir="${build}/test-reports/">
+                <fileset dir="${test}">
+                    <include name="**/*Test*.java"/>
+                </fileset>
+            </batchtest>
+        </junit>
+    </target>
+    <target name="clean">
+        <delete dir="${build}"/>
+    </target>
+</project>
