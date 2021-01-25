@@ -66,13 +66,15 @@ AnyShare://Iaoceot/课件资料共享
 
 DK：矩阵论/矩阵论20210107补充材料(赵迪老师a卷)
 
-慕弋云子：目前在维护数理统计的笔记内容[https://github.com/Muyiyunzi/ShuLiTongJi_BUAA],以及北航云盘贡献的课程参考文件
+慕弋云子：目前在维护数理统计的笔记内容[https://github.com/Muyiyunzi/ShuLiTongJi_BUAA] ,以及北航云盘贡献的课程参考文件
 
 ChibisukeDragon：遥感地图与视频处理技术、经济学思想和中特参考书籍
 
 Vladimir-Chan:6系部分同学选的跨学科课，3系的智能自主系统，期末考试内容的回忆版
 
 rorschachandbat:添加了联邦党人文集的一般通识课
+
+Mad-Devil：贡献了服务计算2020的代码部分
 
 本项目由浙江大学课程攻略共享计划 [https://github.com/QSCTech/zju-icicles] 启发，部分方式参考浙大项目构建。
 
