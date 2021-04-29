@@ -76,5 +76,7 @@ rorschachandbat:添加了联邦党人文集的一般通识课
 
 Mad-Devil：贡献了服务计算2020的代码部分
 
+ChibisukeDragon ：添加了云计算技术原理、人机交互课件、航天型号软件工程、网络安全前沿技术实践讲堂、机器学习2020课件
+
 本项目由浙江大学课程攻略共享计划 [https://github.com/QSCTech/zju-icicles] 启发，部分方式参考浙大项目构建。
 
