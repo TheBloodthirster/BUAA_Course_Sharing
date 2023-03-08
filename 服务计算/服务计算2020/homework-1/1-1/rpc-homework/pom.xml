@@ -16,7 +16,7 @@
         </plugins>
     </build>
     <properties>
-        <dubbo.version>2.7.15</dubbo.version>
+        <dubbo.version>2.7.21</dubbo.version>
     </properties>
 
     <dependencies>
