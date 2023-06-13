@@ -1,0 +1,33 @@
+dfs(int curPoint)
+// dfs搜索，分支定界算法
+// 输入：当前节点curPoint
+// 输出：无，但是会更新全局变量最优解
+
+// 到达终点
+if curPoint = 终点
+    if curCost满足要求 && curLen满足要求
+        更新最优解
+    end
+    return;
+end
+
+// 剪枝
+//（其中curPoint到终点的最小花费和最小长度通过dijkstra算法预处理得到）
+if 当前花费 + curPoint到终点最小花费 > 1500 || 当前长度 + curPoint到终点最小长度 > 最优长度
+    return;
+end
+
+// 搜索
+for 边e in curPoint的所有有效边
+    if e.end未被访问 && 当前花费 + e.cost <= 1500 && 当前长度 + e.len <= 最优长度
+        e.end被访问;
+        当前花费 += e.cost;
+        当前长度 += e.len;
+        当前路径 添加 e.end;
+        dfs(e.end);
+        e.end未被访问;
+        当前路径 删除 e.end;
+        当前花费 -= e.cost;
+        当前长度 -= e.len;
+    end
+end
