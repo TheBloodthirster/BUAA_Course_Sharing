@@ -1,0 +1,42 @@
+算法为代码TSP：
+TSP(D,n)
+//旅行商问题动态规划求解
+//输入：邻接矩阵花费D和节点个数n
+//输出：无，但会更新dp表
+
+//init 即各个城市直接到城市1的距离
+for 城市i in 所有的城市
+	dp[i][0] = D[i][0]
+end
+
+//dp
+for j in 所有的城市组合
+	for i in 所有的城市
+		if i 不在j中
+			for k in j中城市
+				// 更新i经过j的距离，通过与i-k再经过j-{k}的距离比较
+				dp[i][j] = min(dp[i][j], d[k][j-{k}]+D[i][k])
+			end
+		end
+	end
+end
+
+算法为代码getPath：
+getPath()
+// 根据dp表的记录获得路径
+// 输入：无
+// 输出：无（打印路径）
+
+i = 0
+while(j中城市不为空) do
+	打印 城市i
+	for k in j中所有城市
+		// 如果最优值通过k城市计算而来
+		if dp[i][j] == dp[i][j-{k}]+D[i][k]
+			i = k
+			j = j-{k}
+			break
+		end
+	end
+end
+打印 城市i
