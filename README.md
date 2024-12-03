@@ -21,11 +21,11 @@
 
 北航云盘仓库文件为往届学长学姐整理，部分文件与本仓库文件会重合，部分课件因为隐私问题只有云盘仓库有(2021.10.22修改，打开下载权限)：
 
-https://bhpan.buaa.edu.cn:443/link/6C14718EE66E6F25956D54E1BECC185A
+[https://bhpan.buaa.edu.cn:443/link/6C14718EE66E6F25956D54E1BECC185A](https://bhpan.buaa.edu.cn/link/AA8B9E9C67DA0F40B4BB528914967E83CF)
 
 有效期限：2026-10-01 23:59
 
-访问密码：k3Cs
+访问密码：o3PL
 
 北航云盘的http共享方式可以直接下载，或者在线预览，同学们可以保存到自己网盘，或者通过以下云盘内部共享连接下载
 
